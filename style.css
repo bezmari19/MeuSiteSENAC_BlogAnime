@@ -1,6 +1,8 @@
 @charset "UTF-8";
 
-/* Define a cor de fundo da página e estilos básicos */
+header {
+   font-family: Arial, ;
+}
 body {
     background-color: #ffc4c4;
     font-family: Arial, sans-serif;
@@ -10,7 +12,7 @@ body {
   
   /* Estiliza o cabeçalho principal */
   h1 {
-    color: #2e8b57;
+    color: #6b0254;
     text-align: center;
   }
   
