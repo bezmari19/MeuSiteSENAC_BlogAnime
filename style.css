@@ -1,4 +1,16 @@
 @charset "UTF-8";
+.header {
+  background-color: #F1F1F1;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  font-family: 'Courier New', Courier, monospace;
+  color: #ffffff;
+  text-align: center;
+}
+
 .topnav {
   background-color: #8400779a;
   overflow: hidden;
@@ -26,11 +38,6 @@
 .topnav a.active {
   background-color: #ff00c3f3;
   color: rgb(0, 0, 0);
-}
-h1 {
-  font-family: 'Courier New', Courier, monospace;
-  color: #ffffff;
-  text-align: center;
 }
 
 p {
