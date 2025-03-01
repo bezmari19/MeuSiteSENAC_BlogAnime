@@ -1,8 +1,43 @@
 @charset "UTF-8";
-
-header {
-   font-family: Arial, ;
+.topnav {
+  background-color: #8400779a;
+  overflow: hidden;
 }
+
+.topnav a {
+  float: left;
+  color: #ffffff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: black;
+  text-shadow: 1px 1px black;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.topnav a:hover {
+  background-color: #ff00c3f3;
+  color: rgb(0, 0, 0);
+}
+
+.topnav a.active {
+  background-color: #ff00c3f3;
+  color: rgb(0, 0, 0);
+}
+h1 {
+  font-family: 'Courier New', Courier, monospace;
+  color: #ffffff;
+  text-align: center;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
 body {
     background-color: #ffc4c4;
     font-family: Arial, sans-serif;
@@ -10,14 +45,3 @@ body {
     margin: 20px;
   }
   
-  /* Estiliza o cabeçalho principal */
-  h1 {
-    color: #6b0254;
-    text-align: center;
-  }
-  
-  /* Estiliza o parágrafo */
-  p {
-    font-size: 18px;
-    line-height: 1.5;
-  }
