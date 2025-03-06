@@ -12,8 +12,9 @@ A proposta da criação dele é por em prática conceitos que fomos ensinados du
 # Aqui estão alguns dos links útesis para entender melhor e aprender mais sobre HTML e CSS!
 
 <div> 
-  <a href = "https://github.com/lleonardogr"><immg scr="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white">
-  </a>
+  <a href="https://github.com/lleonardogr"><immg scr="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>
+    <a href="https://lleonardogr.github.io/tutoriais_aulas_s/section-starting-page.html"><img scr="https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white">
+    </a>
   </div> 
 
 
