@@ -1,11 +1,12 @@
 @charset "UTF-8";
 .header {
-  background-color: #F1F1F1;
+  background-color: #710075;
   text-align: center;
   padding: 20px;
 }
 
 h1 {
+  padding: 60px;
   font-family: 'Courier New', Courier, monospace;
   color: #ffffff;
   text-align: center;
@@ -21,7 +22,7 @@ h1 {
   color: #ffffff;
   text-align: center;
   padding: 14px 16px;
-  text-decoration: underline;
+  text-decoration: none;
   text-decoration-thickness: 1px;
   text-decoration-color: black;
   text-shadow: 1px 1px black;
@@ -31,13 +32,8 @@ h1 {
 }
 
 .topnav a:hover {
-  background-color: #ff00c3f3;
-  color: rgb(0, 0, 0);
-}
-
-.topnav a.active {
-  background-color: #ff00c3f3;
-  color: rgb(0, 0, 0);
+  background-color: #cc8ee2f3;
+  color: #ffffff;
 }
 
 p {
@@ -51,4 +47,5 @@ body {
     color: #000000;
     margin: 20px;
   }
+
   
