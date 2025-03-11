@@ -9,7 +9,7 @@ A proposta da criação dele é por em prática conceitos que fomos ensinados du
 - O site deve conter arquivos multimídia (imagens/videos)
 - Apresentar o projeto em Live Coding no Youtube.
 
-# Aqui estão alguns dos links útesis para entender melhor e aprender mais sobre HTML e CSS!
+# Aqui estão alguns dos links úteis para entender melhor e aprender mais sobre HTML e CSS!
 
 <div> 
   <a href="https://github.com/lleonardogr"><immg scr="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"></a>
