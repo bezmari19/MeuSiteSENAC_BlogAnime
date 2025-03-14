@@ -1,5 +1,22 @@
 @charset "UTF-8";
 
+.header{
+  background-image:linear-gradient(to bottom, transparent 0%, #470022 80%), url(https://i.pinimg.com/736x/69/6e/bb/696ebb7a89d2d5a0f354d4d5ac1f1b72.jpg);
+  padding-top: 70px;
+  padding-right: 70px;
+  padding-bottom: 30px;
+  padding-left: 70px;
+  background-size: cover;
+  background-position:center;
+  display: flex;
+  flex-direction: column;
+  position: relative; 
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px #000000;
+
+}
+
 body {
   background-color: #c790ca63;
   }
