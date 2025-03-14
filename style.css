@@ -53,34 +53,32 @@
 body {
 background-color: #c790ca63;
 text-align: center;
-
 }
 
-.article{
-  text-align: left;
-}
-
-.column.column.side {
-  background-color: #ff00996c;
-  width: 30%
-}
-
-.column.middle {
-  background-color: #ff00996c;
-  width: 60%;
+.column {
+  float: left;
+  padding: 10px;
 }
 
 .column.side {
-  background-color: #ff00996c;
-  width: 30%;
+  width: 25%;
 }
 
-.row:after {
-  content:"";
-  display:block;
-  clear:right;
+.column.middle {
+  width: 50%;
 }
 
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
+}
 
 .footer {
   background-color: #8400779a;
