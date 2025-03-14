@@ -2,20 +2,41 @@
 
 /* Define a cor de fundo da página e estilos básicos */
 body {
-    background-color: #ffc4c4;
-    font-family: Arial, sans-serif;
-    color: #000000;
-    margin: 20px;
+  background-color: #c790ca63;
   }
-  
-  /* Estiliza o cabeçalho principal */
-  h1 {
-    color: #2e8b57;
-    text-align: center;
-  }
-  
-  /* Estiliza o parágrafo */
-  p {
-    font-size: 18px;
-    line-height: 1.5;
-  }
+
+.topnav {
+  background-color: #8400779a;
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  color: #ffffff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  text-decoration-thickness: 1px;
+  text-decoration-color: black;
+  text-shadow: 1px 1px black;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.topnav a:hover {
+  background-color: #cc8ee2f3;
+  color: #ffffff;
+}
+
+.footer {
+  background-color: #8400779a;
+  text-align: left;
+  color: #ffffff;
+  text-shadow: 1px 1px #000000;
+  padding-top:40px;
+  padding-bottom:40px;
+  padding-left:50px;
+  padding-right:50px;
+  position: relative;
+}
