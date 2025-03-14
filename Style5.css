@@ -13,19 +13,10 @@
     color: white;
     text-shadow: 2px 2px #000000;
   }
-
-  .header {
-    background-image: url();
-    padding-top: 70px;
-    padding-right: 70px;
-    padding-bottom: 30px;
-    padding-left: 70px;
-    background-size: cover;
-    background-position:center;
-      display: flex;
-      flex-direction: column;
-      position: relative;
-  } 
+  
+  body {
+    background-color: #c790ca63;
+    }
   
   .topnav {
     background-color: #8400779a;
@@ -51,66 +42,6 @@
     color: #ffffff;
   }
   
-  body {
-  background-color: #c790ca63;
-  }
-  
-  .column {
-    float: left;
-  }
-  
-  .column.side {
-    width: 25%;
-  }
-  
-  .column.middle {
-    width: 50%;
-  }
-  
-  .row::after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  @media screen and (max-width: 600px) {
-    .column.side, .column.middle {
-      width: 100%;
-    }
-  }
-  
-  .section.top {
-    background-color: #ffffff;
-    padding: 40px;
-  }
-  
-  .section.middle{
-    background-color: #c94be95d;
-    padding: 40px;
-  }
-  
-  .section.bottom{
-    background-color: #ffffff;
-    padding: 40px;
-  }
-  
-  
-  
-  .article.one {
-  }
-  
-  .article.two {
-  }
-  
-  .article.three {
-  }
-  
-  .article.four {
-  }
-  
-  .article.five {
-  }
-  
   .footer {
     background-color: #8400779a;
     text-align: left;
@@ -122,4 +53,3 @@
     padding-right:50px;
     position: relative;
   }
-  
