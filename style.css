@@ -52,12 +52,10 @@
 
 body {
 background-color: #c790ca63;
-text-align: center;
 }
 
 .column {
   float: left;
-  padding: 10px;
 }
 
 .column.side {
@@ -80,12 +78,48 @@ text-align: center;
   }
 }
 
+.section.top {
+  background-color: #ffffff;
+  padding: 40px;
+}
+
+.section.middle{
+  background-color: #c94be95d;
+  padding: 40px;
+}
+
+.section.bottom{
+  background-color: #ffffff;
+  padding: 40px;
+}
+
+
+
+.article.one {
+}
+
+.article.two {
+}
+
+.article.three {
+}
+
+.article.four {
+}
+
+.article.five {
+}
+
 .footer {
   background-color: #8400779a;
   text-align: left;
   color: #ffffff;
   text-shadow: 1px 1px #000000;
-  padding-top: 30px;
+  padding-top:40px;
+  padding-bottom:40px;
+  padding-left:50px;
+  padding-right:50px;
+  position: relative;
 }
 
   
