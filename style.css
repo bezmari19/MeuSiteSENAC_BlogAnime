@@ -36,7 +36,6 @@
   color: #ffffff;
   text-align: center;
   padding: 14px 16px;
-  padding-left: ;
   text-decoration: none;
   text-decoration-thickness: 1px;
   text-decoration-color: black;
@@ -52,14 +51,18 @@
 }
 
 body {
-background-color: #f98bff85;
-text-align: left;
+background-color: #c790ca63;
+text-align: center;
 
 }
 
-.column.top {
+.article{
+  text-align: left;
+}
+
+.column.column.side {
   background-color: #ff00996c;
-  width: 60%
+  width: 30%
 }
 
 .column.middle {
@@ -67,15 +70,24 @@ text-align: left;
   width: 60%;
 }
 
-.column.bottom {
+.column.side {
   background-color: #ff00996c;
-  width: 60%;
+  width: 30%;
 }
 
-.row::before {
+.row:after {
   content:"";
   display:block;
   clear:right;
+}
+
+
+.footer {
+  background-color: #8400779a;
+  text-align: left;
+  color: #ffffff;
+  text-shadow: 1px 1px #000000;
+  padding-top: 30px;
 }
 
   
