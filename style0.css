@@ -24,9 +24,9 @@
     padding-left: 70px;
     background-size: cover;
     background-position:center;
-      display: flex;
-      flex-direction: column;
-      position: relative;
+    display: flex;
+    flex-direction: column;
+    position: relative;
   } 
   
   .topnav {
