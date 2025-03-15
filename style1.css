@@ -5,9 +5,10 @@
   background-color: rgba(67, 5, 73, 0.4);
   padding-top: 70px;
   padding-right: 70px;
-  padding-bottom: 30px;
+  padding-bottom: 50px;
   padding-left: 70px;
   font-size: large;
+  font-weight: bolder;
   text-transform:capitalize;
   text-shadow: 2px 2px#000000;
   text-align: center;
