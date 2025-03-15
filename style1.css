@@ -1,5 +1,12 @@
 @charset "UTF-8";
 
+.estiloFonte{
+  text-transform: uppercase;
+  text-rendering: geometricPrecision;
+  font-weight: bolder;
+  font-size: larger;
+}
+
 .header a {
   border: 2px solid black;
   background-color: rgba(67, 5, 73, 0.4);

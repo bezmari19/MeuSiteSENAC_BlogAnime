@@ -20,6 +20,13 @@
   font-weight: bolder;
 }
 
+.estiloFonte {
+  text-transform: uppercase;
+  text-rendering: geometricPrecision;
+  font-weight: bolder;
+  font-size: larger
+}
+
 body {
   background-color: #c790ca63;
   }
