@@ -87,7 +87,40 @@
     }
   }
 
-  
+  .article {
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: left;
+    font-size: medium;
+    font-weight: normal;
+    text-transform: lowercase;
+  }
+
+  .section.column.top {
+    background-color: #8400779a;
+  }
+
+  .section.column.middle {
+    background-color: #8400779a;
+  }
+
+  .section.column.bottom {
+    background-color: #8400779a;
+  }
+
+  .topSection {
+    background-color: #d587e7;
+  }
+
+  .middleSection {
+    background-color: #d587e7;
+  }
+
+  .bottomSection {
+    background-color: #d587e7;
+  }
+
+
   .footer {
     background-color: #8400779a;
     text-align: left;
