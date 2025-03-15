@@ -94,7 +94,17 @@ background-color: #c790ca63;
   padding: 40px;
 }
 
+.section.top {
 
+}
+
+.section.middle {
+
+}
+
+.section.bottom {
+
+}
 
 .article.one {
 }
@@ -109,6 +119,12 @@ background-color: #c790ca63;
 }
 
 .article.five {
+}
+
+.aside {
+  background-color: #000000;
+  text-align: left;
+  color: #ffffff;
 }
 
 .footer {

@@ -7,14 +7,14 @@
   padding-bottom: 30px;
   padding-left: 70px;
   background-size: cover;
-  background-position:center;
+  background-position: center;
   display: flex;
   flex-direction: column;
   position: relative; 
   text-align: center;
   color: white;
   text-shadow: 2px 2px #000000;
-
+  text-transform: capitalize;
 }
 
 body {
