@@ -116,4 +116,11 @@
     padding-right:50px;
     position: sticky;
   }
+
+  .contatos.ul {
+    list-style-position: inherit;
+    list-style-type:none;
+    margin-right: auto;
+    text-align: right;
+  }
   
