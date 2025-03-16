@@ -113,25 +113,58 @@
     padding: 20px;
   }
 
-
   .footer {
-    background-color: #8400779a;
-    font-family: system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;;
-    text-align: left;
-    color: #ffffff;
-    text-shadow: 1px 1px #000000;
-    padding-top:40px;
-    padding-bottom:40px;
-    padding-left:50px;
-    padding-right:50px;
+    background-color: #840077;
+    background-position: bottom;
+    text-transform: capitalize;
+    font-size: medium;
+    font-weight: lighter;
+    font-style: normal;
+    font-family:system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    padding: 20px;
     position: sticky;
+    color: #ffffff;
   }
 
+  .footer-div{
+    display: flex;
+    flex-wrap: wrap;
+    width: auto;
+    margin: auto;
+    align-items: stretch;
+    padding: 20px 20px 20px 0px;
+  }
+
+  .footer.span {
+    display: flex;
+    flex-wrap: wrap;
+    width:100%;
+    margin: auto;
+    align-items: stretch;
+    padding: 20px 20px 20px 20px;
+  }
+
+  .footer-div-1, .footer-div-2, .footer-div-3, .footer-div-4 {
+    display: flex;
+    width: calc(100% / 4 - 20px);
+    padding: 10px; 
+  }
+
+  @media (max-width: 100px) {
+    .footer-div-column1, .footer-div-column2, .footer-div-column3, .footer-div-column4 {
+      width: calc(100% - 20px);
+      padding: 20px;
+    }
+    .footer-div {
+      padding: 20px 20px 20px 20px;
+    }
+  }
+  
   .contatos.ul {
-    list-style-position: inherit;
+    list-style-position: inside;
     list-style-type:none;
-    margin-right: auto;
-    text-align: right;
+    text-align: left;
     font-family: system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;;
   }
 
@@ -149,7 +182,7 @@
     color: #ffffff;
   }
 
-  .footer-div2{
+  .footer-Bottom-div2{
     background-color: #000000;
   }
   
