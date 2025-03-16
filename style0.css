@@ -116,51 +116,52 @@
   .footer {
     background-color: #840077;
     background-position: bottom;
-    text-transform: capitalize;
-    font-size: large;
+    align-items: column;
+    display: flex;
+    padding: 20px;
+    position: sticky;
+    font-size: medium;
     font-weight: bold;
     font-style: normal;
     font-family: system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    text-align:left;
-    padding: 20px;
-    position: sticky;
+    text-align: left;
     color: #ffffff;
-    align-items: column;
-    display: flex;
   }
-  
+
   #columnFooter{
   background-color: #d587e7;
+  background-position: center;
   padding: 20px;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 10px;
+  position: relative;
 }
 
+  .footerBottom{
+    background-color: #000000;
+    background-position: bottom;
+    padding: 20px;
+    position: sticky;
+  }
+
   .estiloFonteFooter {
-    text-transform: capitalize;
+    color: #ffffff;
+    text-transform:none;
     text-rendering: geometricPrecision;
-    text-shadow: 1px 1px #ffffff;
-    text-align: left;
+    text-shadow: 1px 1px #000000;
+    text-align: center;
+    font-size: 85%;
+    font-weight: bolder;
+    font-family: system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    flex-direction: justify;
     width:100%;
-    margin: auto;
+    height: 100%;
+    margin: 20px;
     align-items: center, space-between;
   }
 
-  #contatos.ul {
-    list-style-position: inside;
-    list-style-type:none;
-    text-align: justify;
-    font-family: system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;;
-  }
-
-  .footerBottom{
-    background-color: #000000;
-    background-position: bottom;
-    padding: 20px;
-    position: sticky;
-  }
-
   .estiloFonteFooter-Bottom{
     background-color: #000000;
     text-transform: capitalize;
@@ -169,34 +170,7 @@
     font-size: medium;
     font-weight: lighter;
     font-style: normal;
-    font-family:system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    text-align: center;
-    color: #ffffff;
-  }
-
-  .contatos.ul {
-    list-style-position: inside;
-    list-style-type:none;
-    text-align: left;
-    font-family: system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;;
-  }
-
-  .footerBottom{
-    background-color: #000000;
-    background-position: bottom;
-    padding: 20px;
-    position: sticky;
-  }
-
-  .estiloFonteFooter-Bottom{
-    background-color: #000000;
-    text-transform: capitalize;
-    text-rendering: geometricPrecision;
-    text-shadow: 1px 1px #000000;
-    font-size: medium;
-    font-weight: lighter;
-    font-style: normal;
-    font-family:system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-align: center;
     color: #ffffff;
   }
