@@ -63,28 +63,13 @@
   background-color: #c790ca63;
   }
   
-  .column {
-    float: left;
-  }
-  
-  .column.side {
-    width: 25%;
-  }
-  
-  .column.middle {
-    width: 50%;
-  }
-  
-  .row::after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  @media screen and (max-width: 600px) {
-    .column.side, .column.middle {
-      width: 100%;
-    }
+  .topaside {
+    background-color: #cd0f9198;
+    background-position: center;
+    background-size: cover;
+    padding: 20px;
+    text-align: center;
+
   }
 
   .article {
@@ -119,7 +104,6 @@
   .bottomSection {
     background-color: #d587e7;
   }
-
 
   .footer {
     background-color: #8400779a;
