@@ -117,39 +117,65 @@
     background-color: #840077;
     background-position: bottom;
     text-transform: capitalize;
-    font-size: medium;
-    font-weight: lighter;
+    font-size: large;
+    font-weight: bold;
     font-style: normal;
-    font-family:system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    text-align: center;
+    font-family: system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align:left;
     padding: 20px;
     position: sticky;
     color: #ffffff;
   }
 
-  .footer-div{
-    display: flex;
-    flex-wrap: wrap;
-    width: auto;
-    margin: auto;
-    align-items: stretch;
-    padding: 20px 20px 20px 0px;
+  #contatos {
+    align-items: left;
+
   }
 
-  .footer.span {
+  .footer-div{
     display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: auto;
+    align-items: flex-start;
+    align-items: left;
+  }
+
+  .estiloFonteFooter {
+    text-transform: capitalize;
+    text-rendering: geometricPrecision;
+    text-shadow: 1px 1px #ffffff;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     width:100%;
     margin: auto;
-    align-items: stretch;
-    padding: 20px 20px 20px 20px;
+    align-items: center, space-between;
+    padding: inherit;
   }
 
-  .footer-div-1, .footer-div-2, .footer-div-3, .footer-div-4 {
-    display: flex;
-    width: calc(100% / 4 - 20px);
-    padding: 10px; 
+  .footer-div-column1 {
+    width: 25%;
+    padding: 20px;
   }
+  .footer-div-column2 {
+    display: flex;
+    width: 25%;
+    padding: 20px;}
+  .footer-div-column3 {
+    display: flex;
+    width: 25%;
+    padding: 20px;
+  }
+  .footer-div-column4 {
+    display: flex;
+    width: 25%;
+    padding: 20px;
+  }
+
+
+
 
   @media (max-width: 100px) {
     .footer-div-column1, .footer-div-column2, .footer-div-column3, .footer-div-column4 {
@@ -157,7 +183,7 @@
       padding: 20px;
     }
     .footer-div {
-      padding: 20px 20px 20px 20px;
+      padding: 60px 0px 40px 0px;
     }
   }
   
@@ -171,18 +197,20 @@
   .footerBottom{
     background-color: #000000;
     background-position: bottom;
+    padding: 20px;
+    position: sticky;
+  }
+
+  .estiloFonteFooter-Bottom{
+    background-color: #000000;
     text-transform: capitalize;
+    text-rendering: geometricPrecision;
+    text-shadow: 1px 1px #000000;
     font-size: medium;
     font-weight: lighter;
     font-style: normal;
     font-family:system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-align: center;
-    padding: 20px;
-    position: sticky;
     color: #ffffff;
-  }
-
-  .footer-Bottom-div2{
-    background-color: #000000;
   }
   
