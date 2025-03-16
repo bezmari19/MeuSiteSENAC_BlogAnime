@@ -125,21 +125,14 @@
     padding: 20px;
     position: sticky;
     color: #ffffff;
-  }
-
-  #contatos {
-    align-items: left;
-
-  }
-
-  .footer-div{
+    align-items: column;
     display: flex;
-    flex-direction: column;
-    padding: 20px;
-    margin: auto;
-    align-items: flex-start;
-    align-items: left;
   }
+  
+  #columnFooter{
+  background-color: #d587e7;
+  padding: 20px;
+}
 
   .estiloFonteFooter {
     text-transform: capitalize;
@@ -152,41 +145,35 @@
     width:100%;
     margin: auto;
     align-items: center, space-between;
-    padding: inherit;
   }
 
-  .footer-div-column1 {
-    width: 25%;
+  #contatos.ul {
+    list-style-position: inside;
+    list-style-type:none;
+    text-align: justify;
+    font-family: system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;;
+  }
+
+  .footerBottom{
+    background-color: #000000;
+    background-position: bottom;
     padding: 20px;
-  }
-  .footer-div-column2 {
-    display: flex;
-    width: 25%;
-    padding: 20px;}
-  .footer-div-column3 {
-    display: flex;
-    width: 25%;
-    padding: 20px;
-  }
-  .footer-div-column4 {
-    display: flex;
-    width: 25%;
-    padding: 20px;
+    position: sticky;
   }
 
-
-
-
-  @media (max-width: 100px) {
-    .footer-div-column1, .footer-div-column2, .footer-div-column3, .footer-div-column4 {
-      width: calc(100% - 20px);
-      padding: 20px;
-    }
-    .footer-div {
-      padding: 60px 0px 40px 0px;
-    }
+  .estiloFonteFooter-Bottom{
+    background-color: #000000;
+    text-transform: capitalize;
+    text-rendering: geometricPrecision;
+    text-shadow: 1px 1px #000000;
+    font-size: medium;
+    font-weight: lighter;
+    font-style: normal;
+    font-family:system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    color: #ffffff;
   }
-  
+
   .contatos.ul {
     list-style-position: inside;
     list-style-type:none;
