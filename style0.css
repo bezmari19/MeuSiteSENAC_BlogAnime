@@ -142,20 +142,7 @@
   position: relative;
 }
 
-<<<<<<< HEAD
-.footerBottom {
-  background-color: #000000;
-  background-position: bottom;
-  text-align: center;
-  padding: 20px;
-  position: sticky;
-  
-}
-
-.estiloFonteFooter {
-=======
   .estiloFonteFooter {
->>>>>>> 788589dd8d31a70b9e9c8255a7a349096b01362c
     color: #ffffff;
     text-transform:none;
     text-rendering: geometricPrecision;
