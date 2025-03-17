@@ -124,6 +124,7 @@
     padding-left: 100px;
     padding-right: 100px;
     position: sticky;
+    margin: auto;
     font-size: medium;
     font-weight: bold;
     font-style: normal;
@@ -162,6 +163,7 @@
   .footerBottom{
     background-color: #000000;
     background-position: bottom;
+    margin: auto;
     padding: 20px;
     position: sticky;
     text-align: center;

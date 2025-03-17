@@ -117,9 +117,13 @@ background-color: #c790ca63;
   background-color: #840077;
   background-position: bottom;
   align-items: column;
+  justify-content: center;
   display: flex;
   padding: 20px;
+  padding-left: 100px;
+  padding-right: 100px;
   position: sticky;
+  margin: auto;
   font-size: medium;
   font-weight: bold;
   font-style: normal;
@@ -145,6 +149,7 @@ background-color: #c790ca63;
   text-align: center;
   padding: 20px;
   position: sticky;
+  margin: auto;
   
 }
 
