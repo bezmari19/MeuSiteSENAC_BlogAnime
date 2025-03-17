@@ -73,32 +73,36 @@ body {
   text-align: left;
   font-size: medium;
   font-weight: normal;
-  text-transform: lowercase;
+  text-transform:;
   font-family: system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-.section.column.top {
-  background-color: #8400779a;
+.estiloFonteArticle {
+  text-transform: uppercase;
+  text
 }
 
-.section.column.middle {
-  background-color: #8400779a;
-}
-
-.section.column.bottom {
-  background-color: #8400779a;
+.estiloFonteSection {
+  color: #2004309c;
+  text-shadow: 1px 1px #000000;
+  text-transform: capitalize;
+  text-align: justify;
+  text-rendering: geometricPrecision;
 }
 
 .topSection {
   background-color: #d587e7;
+  text-transform: normal
 }
 
 .middleSection {
   background-color: #d587e7;
+  text-transform: normal
 }
 
 .bottomSection {
   background-color: #d587e7;
+  text-transform: normal
 }
 
 .row.aside {
