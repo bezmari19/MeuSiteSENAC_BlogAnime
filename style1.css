@@ -141,8 +141,10 @@ position: relative;
 .footerBottom{
   background-color: #000000;
   background-position: bottom;
+  text-align: center;
   padding: 20px;
   position: sticky;
+  
 }
 
 .estiloFonteFooter {
@@ -171,6 +173,6 @@ position: relative;
   font-weight: lighter;
   font-style: normal;
   font-family: system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  text-align: center;
   color: #ffffff;
+  text-align: center;
 }

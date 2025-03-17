@@ -109,6 +109,7 @@ position: relative;
 .footerBottom{
   background-color: #000000;
   background-position: bottom;
+  text-align: center;
   padding: 20px;
   position: sticky;
 }
