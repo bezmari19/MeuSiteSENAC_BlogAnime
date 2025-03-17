@@ -118,8 +118,11 @@
     background-color: #840077;
     background-position: bottom;
     align-items: column;
+    justify-content: center;
     display: flex;
     padding: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
     position: sticky;
     font-size: medium;
     font-weight: bold;
@@ -139,13 +142,6 @@
   position: relative;
 }
 
-  .footerBottom{
-    background-color: #000000;
-    background-position: bottom;
-    padding: 20px;
-    position: sticky;
-  }
-
   .estiloFonteFooter {
     color: #ffffff;
     text-transform:none;
@@ -156,11 +152,19 @@
     font-weight: bolder;
     font-family: system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     display: flex;
-    flex-direction: justify;
+    flex-direction: flex;
     width:100%;
     height: 100%;
     margin: 20px;
     align-items: center, space-between;
+  }
+
+  .footerBottom{
+    background-color: #000000;
+    background-position: bottom;
+    padding: 20px;
+    position: sticky;
+    text-align: center;
   }
 
   .estiloFonteFooter-Bottom{
@@ -172,7 +176,6 @@
     font-weight: lighter;
     font-style: normal;
     font-family: system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    text-align: center;
     color: #ffffff;
   }
   
