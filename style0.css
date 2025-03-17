@@ -79,6 +79,8 @@ body {
 
 .estiloFonteArticle {
   text-transform: uppercase;
+  text-shadow: 1px 1px #000000;
+  font-family: system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .estiloFonteSection {
@@ -87,6 +89,15 @@ body {
   text-transform: capitalize;
   text-align: justify;
   text-rendering: geometricPrecision;
+  font-family: system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.estiloFonteArticleSub {
+  text-transform: capitalize;
+  text-shadow: 1px 1px #000000;
+  font-family: system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: larger;
+  font-weight: bold;
 }
 
 .topSection {
