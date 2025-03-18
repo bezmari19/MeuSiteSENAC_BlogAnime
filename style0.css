@@ -14,6 +14,7 @@
   border: 2px solid black;
   background-color: #43054966;
   padding: 70px 70px 50px 70px;
+  flex: auto;
   font-size: large;
   font-weight: bolder;
   text-transform: capitalize;
@@ -28,6 +29,8 @@
   text-rendering: geometricPrecision;
   font-size: larger;
   font-weight: bolder;
+  text-align: center;
+  flex-wrap: wrap;
 }
 
 .topnav {
@@ -37,6 +40,8 @@
 
 .topnav a {
   float: left;
+  flex: auto;
+  display: flex;
   color: #ffffff;
   text-align: center;
   padding: 14px 16px;
@@ -63,6 +68,7 @@ body {
   background-position: center;
   background-size: cover;
   padding: 20px;
+  flex: wrap;
   font-family: system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   text-align: center;
 }
@@ -70,6 +76,7 @@ body {
 .article {
   background-color: #ffffff;
   padding: 20px;
+  display: flexbox;
   text-align: left;
   font-size: medium;
   font-weight: normal;
@@ -100,6 +107,14 @@ body {
   font-weight: bold;
 }
 
+.videosHome {
+  max-width: 50%;
+  height: auto;
+  display: block;
+  padding: 20px;
+  margin: 0 auto;
+}
+
 .topSection {
   background-color: #d587e7;
   text-transform: normal
@@ -107,12 +122,16 @@ body {
 
 .middleSection {
   background-color: #d587e7;
-  text-transform: normal
+  text-transform: normal;
+  flex: auto;
+  display: flexbox;
 }
 
 .bottomSection {
   background-color: #d587e7;
-  text-transform: normal
+  text-transform: normal;
+  flex: auto;
+  display: flexbox;
 }
 
 .bottomaside {
@@ -188,4 +207,36 @@ body {
   font-family: system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   color: #ffffff;
   text-align: center;
+}
+
+/* Estilo para as divs das imagens */
+.imgHomeTop, .imgHomeMiddle, .imgHomeBottom {
+  text-align: center; /* Centraliza as imagens */
+  margin: 20px auto; /* Adiciona espaçamento ao redor */
+  max-width: 100%; /* Garante que as imagens não ultrapassem o tamanho do container */
+}
+
+.imgHomeTop img, .imgHomeMiddle img, .imgHomeBottom img {
+  width: 100%; /* Faz as imagens ocuparem 100% da largura da div */
+  max-width: 600px; /* Define um tamanho máximo para as imagens */
+  height: auto; /* Mantém a proporção das imagens */
+  border-radius: 10px; /* Adiciona bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra para destaque */
+}
+
+.imgTextContainer {
+  display: flex; /* Posiciona os itens lado a lado */
+  align-items: center; /* Alinha verticalmente */
+  gap: 20px; /* Espaçamento entre a imagem e o texto */
+}
+
+.imgTextContainer img {
+  max-width: 50%; /* Ajusta a largura da imagem */
+  height: auto; /* Mantém a proporção da imagem */
+}
+
+.imgTextContainer p {
+  flex: 1; /* Faz o texto ocupar o espaço restante */
+  font-size: 16px; /* Ajusta o tamanho da fonte */
+  line-height: 1.5; /* Melhora a legibilidade */
 }
