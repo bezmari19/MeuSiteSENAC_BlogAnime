@@ -64,6 +64,9 @@ body {
 }
 
 .topaside {
+  text-decoration:dashed;
+  text-decoration-color: #000000;
+  color: #1f0037;
   background-color: #cd0f9198;
   background-position: center;
   background-size: cover;
@@ -71,6 +74,25 @@ body {
   flex: wrap;
   font-family: system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   text-align: center;
+}
+
+.subTopAside {
+  color: #ffffff;
+  text-align: center;
+  text-transform: normal;
+  text-shadow: 1px 1px #000000;
+  text-overflow: clip;
+  font-family: system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.siteLink {
+  font-style: italic;
+  font-size: large;
+  text-rendering: geometricPrecision;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-family:system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .article {
