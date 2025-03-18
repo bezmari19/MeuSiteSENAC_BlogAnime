@@ -85,21 +85,25 @@ body {
 }
 
 .estiloFonteArticle {
+  padding:20px;
   text-transform: uppercase;
   text-shadow: 1px 1px #000000;
   font-family: system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .estiloFonteSection {
+  padding: 20px;
   color: #2004309c;
   text-shadow: 1px 1px #000000;
   text-transform: capitalize;
-  text-align: justify;
+  text-align: center;
+  align-items: center;
   text-rendering: geometricPrecision;
   font-family: system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .estiloFonteArticleSub {
+  padding: 20px;
   text-transform: capitalize;
   text-shadow: 1px 1px #000000;
   font-family: system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -108,11 +112,83 @@ body {
 }
 
 .videosHome {
+  max-width: 100%; /* Garante que os vídeos ocupem o espaço disponível */
+  margin: 20px auto; /* Centraliza os vídeos e adiciona espaçamento */
+  text-align: center; /* Centraliza o conteúdo dentro da div */
+}
+
+.videosHome iframe {
+  width: 100%; /* Faz o vídeo ocupar toda a largura da div */
+  max-width: 560px; /* Define um tamanho máximo para o vídeo */
+  height: auto; /* Mantém a proporção do vídeo */
+  border-radius: 10px; /* Adiciona bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra para destaque */
+}
+
+.videosContainer {
+  display: flex; /* Posiciona o vídeo e o texto lado a lado */
+  align-items: center; /* Alinha verticalmente */
+  gap: 20px; /* Espaçamento entre o vídeo e o texto */
+  margin-bottom: 20px; /* Espaçamento inferior entre os containers */
+}
+
+.videosContainer iframe {
+  flex: 1; /* Faz o vídeo ocupar o espaço necessário */
+  max-width: 560px; /* Define um tamanho máximo para o vídeo */
+  height: auto; /* Mantém a proporção do vídeo */
+  border-radius: 10px; /* Adiciona bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra para destaque */
+}
+
+.videosContainer p {
+  flex: 1; /* Faz o texto ocupar o espaço restante */
+  font-size: 16px; /* Ajusta o tamanho da fonte */
+  line-height: 1.5; /* Melhora a legibilidade */
+  text-align: left; /* Alinha o texto à esquerda */
+}
+
+.section {
+  margin-bottom: 40px; /* Adiciona espaçamento entre as sections */
+}
+
+.section h1, .section p {
+  text-align: center; /* Centraliza os títulos e parágrafos */
+  margin-bottom: 20px; /* Adiciona espaçamento entre os elementos */
+}
+
+.imgHomeTop, .imgHomeMiddle, .imgHomeBottom {
+  text-align: center; 
+  margin: 20px auto;
+  max-width: 100%; 
+}
+
+.imgHomeTop img, .imgHomeMiddle img, .imgHomeBottom img {
+  width: 100%; 
+  max-width: 600px; 
+  height: auto; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px #00000092; 
+
+}
+
+.imgTextContainer {
+  display: flex; 
+  align-items: center; 
+  text-align: left;
+  position: relative;
+  gap: 20px; 
+}
+
+.imgTextContainer img {
   max-width: 50%;
-  height: auto;
-  display: block;
+  height: auto; 
+}
+
+.imgTextContainer p {
   padding: 20px;
-  margin: 0 auto;
+  flex: content;
+  font-size: 16px; 
+  line-height: 1.5; 
 }
 
 .topSection {
@@ -209,34 +285,3 @@ body {
   text-align: center;
 }
 
-/* Estilo para as divs das imagens */
-.imgHomeTop, .imgHomeMiddle, .imgHomeBottom {
-  text-align: center; /* Centraliza as imagens */
-  margin: 20px auto; /* Adiciona espaçamento ao redor */
-  max-width: 100%; /* Garante que as imagens não ultrapassem o tamanho do container */
-}
-
-.imgHomeTop img, .imgHomeMiddle img, .imgHomeBottom img {
-  width: 100%; /* Faz as imagens ocuparem 100% da largura da div */
-  max-width: 600px; /* Define um tamanho máximo para as imagens */
-  height: auto; /* Mantém a proporção das imagens */
-  border-radius: 10px; /* Adiciona bordas arredondadas */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona sombra para destaque */
-}
-
-.imgTextContainer {
-  display: flex; /* Posiciona os itens lado a lado */
-  align-items: center; /* Alinha verticalmente */
-  gap: 20px; /* Espaçamento entre a imagem e o texto */
-}
-
-.imgTextContainer img {
-  max-width: 50%; /* Ajusta a largura da imagem */
-  height: auto; /* Mantém a proporção da imagem */
-}
-
-.imgTextContainer p {
-  flex: 1; /* Faz o texto ocupar o espaço restante */
-  font-size: 16px; /* Ajusta o tamanho da fonte */
-  line-height: 1.5; /* Melhora a legibilidade */
-}
