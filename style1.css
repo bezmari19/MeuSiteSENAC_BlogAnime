@@ -189,3 +189,57 @@ body {
   color: #ffffff;
   text-align: center;
 }
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .topnav a {
+    float: none;
+    display: block;
+    text-align: center;
+  }
+
+  .topaside, .bottomaside {
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  .article {
+    padding: 10px;
+    font-size: small;
+  }
+
+  .footer {
+    flex-direction: column;
+    padding: 10px;
+    text-align: center;
+  }
+
+  #columnFooter {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header a {
+    padding: 20px;
+    font-size: medium;
+  }
+
+  .topnav a {
+    padding: 10px;
+    font-size: small;
+  }
+
+  .article h1, .article h3 {
+    font-size: small;
+  }
+
+  .footer h1 {
+    font-size: small;
+  }
+}
