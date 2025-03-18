@@ -76,10 +76,10 @@ body {
       background-color: #8400779a;
     }
 
-.row.aside {
-  background-color: #d587e7;
-  padding: 20px;
-}
+    .bottomaside {
+      background-color: #d587e7;
+      padding: 20px;
+    }
 
 .footer {
   background-color: #840077;
