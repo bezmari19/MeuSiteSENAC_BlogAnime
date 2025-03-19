@@ -59,16 +59,6 @@ body {
 .article {
   background-color: #ffffff;
   padding: 20px;
-  text-align: left;
-  font-size: medium;
-  font-weight: normal;
-  text-transform: lowercase;
-  font-family: system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-.article {
-  background-color: #ffffff;
-  padding: 20px;
   display: flexbox;
   text-align: left;
   font-size: medium;
@@ -144,6 +134,11 @@ body {
   flex: content;
   font-size: 16px; 
   line-height: 1.5; 
+}
+
+.topSection {
+  background-color: #d587e7;
+  text-transform: normal
 }
 
 .section.column {

@@ -172,10 +172,10 @@ body {
   line-height: 1.5; 
 }
 
-.section.column {
-  background-color: #8400779a;
+.topSection {
+  background-color: #d587e7;
+  text-transform: normal
 }
-
 
 .bottomaside {
   background-color: #d587e7;

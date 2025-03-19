@@ -84,6 +84,11 @@ body {
   font-family: system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+.topSection {
+  background-color: #d587e7;
+  text-transform: normal
+}
+
 .estiloFonteArticleSub {
   padding: 20px;
   text-transform: capitalize;
