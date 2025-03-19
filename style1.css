@@ -133,6 +133,13 @@ body {
   font-weight: bold;
 }
 
+.animesLink {
+  color: #600063;
+  font-family: system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-decoration: none;
+
+}
+
 .videosHome {
   max-width: 100%; 
   margin: 20px auto; 
