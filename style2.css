@@ -262,7 +262,6 @@ body {
   color: #ffffff;
 }
 
-/* Responsividade para tablets (telas menores que 768px) */
 @media (max-width: 768px) {
   .header {
     flex-direction: column;

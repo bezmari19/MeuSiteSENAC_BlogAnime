@@ -254,7 +254,6 @@ body {
   color: #ffffff;
 }
 
-/* Responsividade para tablets (telas menores que 768px) */
 @media (max-width: 768px) {
   .header {
     flex-direction: column;
@@ -272,12 +271,12 @@ body {
   }
 
   .imgTextContainer {
-    flex-direction: column; /* Empilha a imagem e o texto */
+    flex-direction: column;
     text-align: center;
   }
 
   .imgTextContainer img {
-    max-width: 100%; /* Faz a imagem ocupar toda a largura disponível */
+    max-width: 100%; 
     height: auto;
   }
 
@@ -287,12 +286,12 @@ body {
   }
 
   .videosContainer {
-    flex-direction: column; /* Empilha os vídeos e os textos */
+    flex-direction: column; 
     text-align: center;
   }
 
   .videosContainer iframe {
-    max-width: 100%; /* Faz os vídeos ocuparem toda a largura disponível */
+    max-width: 100%; 
     height: auto;
   }
 
@@ -308,7 +307,6 @@ body {
   }
 }
 
-/* Responsividade para smartphones (telas menores que 480px) */
 @media (max-width: 480px) {
   .header {
     padding: 10px;
@@ -325,7 +323,7 @@ body {
   }
 
   .imgTextContainer img {
-    max-width: 100%; /* Ajusta a largura da imagem para telas pequenas */
+    max-width: 100%; 
     height: auto;
   }
 
@@ -335,7 +333,7 @@ body {
   }
 
   .videosContainer iframe {
-    max-width: 100%; /* Ajusta os vídeos para telas pequenas */
+    max-width: 100%; 
     height: auto;
   }
 
