@@ -84,6 +84,11 @@ body {
   font-family: system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+.divTextArticle {
+  background-color: #84007760;
+  padding: 20px;
+}
+
 .estiloFonteArticle {
   padding:20px;
   text-transform: uppercase;
@@ -120,6 +125,15 @@ body {
   align-items: center;
   text-rendering: geometricPrecision;
   font-family: system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.estiloFonteArticleP{
+  font-family: system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-shadow: 1px 0px #ffffff;
+  font-size: medium;
+  font-weight: bold;
+  padding:20px;
+
 }
 
 .videosHome {
