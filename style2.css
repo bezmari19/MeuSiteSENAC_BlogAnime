@@ -261,3 +261,98 @@ body {
   text-align: center;
   color: #ffffff;
 }
+
+/* Responsividade para tablets (telas menores que 768px) */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .topnav a {
+    float: none;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+  }
+
+  .imgTextContainer {
+    flex-direction: column; /* Empilha a imagem e o texto */
+    text-align: center;
+  }
+
+  .imgTextContainer img {
+    max-width: 100%; /* Faz a imagem ocupar toda a largura disponível */
+    height: auto;
+  }
+
+  .imgTextContainer p {
+    text-align: center;
+    padding: 10px;
+  }
+
+  .videosContainer {
+    flex-direction: column; /* Empilha os vídeos e os textos */
+    text-align: center;
+  }
+
+  .videosContainer iframe {
+    max-width: 100%; /* Faz os vídeos ocuparem toda a largura disponível */
+    height: auto;
+  }
+
+  .footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .footerBottom {
+    padding: 10px;
+    font-size: small;
+  }
+}
+
+/* Responsividade para smartphones (telas menores que 480px) */
+@media (max-width: 480px) {
+  .header {
+    padding: 10px;
+    font-size: small;
+  }
+
+  .topnav a {
+    padding: 8px;
+    font-size: 16px;
+  }
+
+  .article h1, .article h3 {
+    font-size: small;
+  }
+
+  .imgTextContainer img {
+    max-width: 100%; /* Ajusta a largura da imagem para telas pequenas */
+    height: auto;
+  }
+
+  .imgTextContainer p {
+    font-size: small;
+    padding: 8px;
+  }
+
+  .videosContainer iframe {
+    max-width: 100%; /* Ajusta os vídeos para telas pequenas */
+    height: auto;
+  }
+
+  .footer {
+    padding: 8px;
+    font-size: small;
+  }
+
+  .footerBottom {
+    padding: 8px;
+    font-size: smaller;
+  }
+}

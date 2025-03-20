@@ -406,6 +406,7 @@ body {
     float: none;
     display: block;
     text-align: center;
+    padding: 10px;
   }
 
   .imgTextContainer {
@@ -436,6 +437,11 @@ body {
     text-align: center;
     padding: 10px;
   }
+
+  .footerBottom {
+    padding: 10px;
+    font-size: small;
+  }
 }
 
 @media (max-width: 480px) {
@@ -445,7 +451,7 @@ body {
   }
 
   .topnav a {
-    padding: 10px;
+    padding: 8px;
     font-size: small;
   }
 
@@ -457,13 +463,22 @@ body {
     max-width: 100%; 
   }
 
+  .imgTextContainer p {
+    font-size: small;
+    padding: 8px;
+  }
+
+  .videosContainer iframe {
+    max-width: 100%; 
+  }
+
   .footer {
-    padding: 10px;
+    padding: 8px;
     font-size: small;
   }
 
   .footerBottom {
-    padding: 10px;
-    font-size: small;
+    padding: 8px;
+    font-size: smaller;
   }
 }
