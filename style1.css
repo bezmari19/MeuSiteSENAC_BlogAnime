@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 .header {
-  background-image: url(https://i.pinimg.com/736x/59/7f/a9/597fa9894b665506f6ef88277261a404.jpg);
+  background-color: #840077;
   padding: 20px;
   background-size: cover;
   background-position: center;
@@ -64,9 +64,6 @@ body {
 }
 
 .topaside {
-  text-decoration:dashed;
-  text-decoration-color: #000000;
-  color: #1f0037;
   background-color: #cd0f9198;
   background-position: center;
   background-size: cover;
@@ -74,25 +71,6 @@ body {
   flex: wrap;
   font-family: system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   text-align: center;
-}
-
-.subTopAside {
-  color: #ffffff;
-  text-align: center;
-  text-transform: normal;
-  text-shadow: 1px 1px #000000;
-  text-overflow: clip;
-  font-family: system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-.siteLink {
-  font-style: italic;
-  font-size: large;
-  text-rendering: geometricPrecision;
-  color: #ffffff;
-  text-decoration: none;
-  text-transform: capitalize;
-  font-family:system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .article {
@@ -156,22 +134,7 @@ body {
   font-size: medium;
   font-weight: bold;
   padding:20px;
-}
 
-.animesLink {
-  padding: 20px;
-  color: #600063;
-  text-decoration: none;
-}
-
-.link-noticia1{
-  padding: 20px;
-  font-family: system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-.animesLink:hover {
-  text-decoration: underline; 
-  color: #840077; 
 }
 
 .videosHome {
@@ -263,7 +226,7 @@ body {
 
 .topSection {
   background-color: #d587e7;
-  text-transform: normal
+  text-transform: normal;
 }
 
 .middleSection {
@@ -314,7 +277,7 @@ body {
 
 .fonteBottomAside-p {
   font-size: medium;
-  text-shadow: 1px 1px #000000;
+  text-shadow: 1px 1px #00000086;
   text-align: left;
   font-family: system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   padding:20px;
@@ -391,7 +354,6 @@ body {
 }
 
 .noticiaLink {
-  font-family: system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   text-decoration: none;
   color: inherit; 
 }
