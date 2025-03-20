@@ -98,6 +98,16 @@ body {
   font-weight: bold;
 }
 
+.estiloFonteArticleP{
+  color: #ffffff;
+  font-family: system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-shadow: 1px 1px #000000;
+  font-size: medium;
+  font-weight: bold;
+  padding:20px;
+
+}
+
 .imgHomeTop {
   text-align: center; 
   margin: 20px auto;
