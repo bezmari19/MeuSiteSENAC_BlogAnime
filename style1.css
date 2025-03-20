@@ -114,6 +114,7 @@ body {
 }
 
 .estiloFonteSection {
+  font-size: larger;
   padding: 20px;
   color: #2004309c;
   text-shadow: 1px 1px #000000;
@@ -133,11 +134,32 @@ body {
   font-weight: bold;
 }
 
-.animesLink {
-  color: #600063;
+.estiloFonteSectionSub{
+  font-size: larger;
+  padding: 20px;
+  color: #2004309c;
+  text-shadow: 1px 1px #000000;
+  text-transform: capitalize;
+  text-align: center;
+  align-items: center;
+  text-rendering: geometricPrecision;
   font-family: system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  text-decoration: none;
+}
 
+.animesLink {
+  padding: 20px;
+  color: #600063;
+  text-decoration: none;
+}
+
+.link-noticia1{
+  padding: 20px;
+  font-family: system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.animesLink:hover {
+  text-decoration: underline; 
+  color: #840077; 
 }
 
 .videosHome {
@@ -322,6 +344,7 @@ body {
 }
 
 .noticiaLink {
+  font-family: system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   text-decoration: none;
   color: inherit; 
 }

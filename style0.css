@@ -111,6 +111,17 @@ body {
   font-weight: bold;
 }
 
+.estiloFonteSectionSub {
+  padding: 20px;
+  color: #2004309c;
+  text-shadow: 1px 1px #000000;
+  text-transform: capitalize;
+  text-align: center;
+  align-items: center;
+  text-rendering: geometricPrecision;
+  font-family: system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
 .videosHome {
   max-width: 100%; 
   margin: 20px auto; 
