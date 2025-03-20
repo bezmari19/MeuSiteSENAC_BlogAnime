@@ -9,8 +9,4 @@ A proposta da criação dele é por em prática conceitos que fomos ensinados du
 - O site deve conter arquivos multimídia (imagens/videos)
 - Apresentar o projeto em Live Coding no Youtube.
 
-<div>
-  <img scr="https://yt3.googleusercontent.com/X3wkHAf-mWsozQpLEwYzPHGQYDAJCgWiyCeSODMgbsFMLOVE-NA0cJMQrhiXR0GBp23sx73ckw=w1707-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj">
-</div>
-
 
