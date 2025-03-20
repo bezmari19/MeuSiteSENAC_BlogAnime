@@ -106,6 +106,11 @@ body {
   font-family: system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+.divTextArticle {
+  background-color: #84007760;
+  padding: 20px;
+}
+
 .estiloFonteArticle {
   padding:20px;
   text-transform: uppercase;
@@ -114,7 +119,6 @@ body {
 }
 
 .estiloFonteSection {
-  font-size: large;
   padding: 20px;
   color: #2004309c;
   text-shadow: 1px 1px #000000;
@@ -134,8 +138,7 @@ body {
   font-weight: bold;
 }
 
-.estiloFonteSectionSub{
-  font-size: larger;
+.estiloFonteSectionSub {
   padding: 20px;
   color: #2004309c;
   text-shadow: 1px 1px #000000;
@@ -144,6 +147,16 @@ body {
   align-items: center;
   text-rendering: geometricPrecision;
   font-family: system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.estiloFonteArticleP{
+  color: #ffffff;
+  font-family: system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-shadow: 1px 1px #000000;
+  font-size: medium;
+  font-weight: bold;
+  padding:20px;
+
 }
 
 .animesLink {
