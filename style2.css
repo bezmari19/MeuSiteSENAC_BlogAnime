@@ -115,12 +115,11 @@ body {
 }
 
 .imgHomeTop img {
-  width: 100%; 
-  max-width: 600px; 
-  height: auto; 
-  border-radius: 10px; 
-  box-shadow: 0 4px 8px #00000092; 
-
+  width: 100%; /* Faz a imagem ocupar toda a largura disponível */
+  max-width: 900px; /* Aumenta o tamanho máximo da imagem */
+  height: auto; /* Mantém a proporção da imagem */
+  border-radius: 10px; /* Mantém bordas arredondadas */
+  box-shadow: 0 4px 8px #00000092; /* Adiciona sombra para destaque */
 }
 
 .imgTextContainer {
