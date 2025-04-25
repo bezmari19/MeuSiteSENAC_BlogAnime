@@ -1,4 +1,4 @@
-# MeuSite_SENACSP
+# MeuSite: Blog de Animes/Mangás e conteúdo Geek
 Esse é o repositório voltado para projeto do site de Programação Web - esse projeto estará em constante construção.🛠💻
 
 A proposta da criação dele é por em prática conceitos que fomos ensinados durante as aulas de Programação Web - Práticas Extensivas. A princiípio contendo alguns pontos de avaliação importantes:
