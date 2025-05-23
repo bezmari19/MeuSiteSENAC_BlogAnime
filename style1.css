@@ -1,6 +1,11 @@
 @charset "UTF-8";
+
+body {
+  background-color: #000000;
+}
+
 .topnav {
-  background-color: #8400779a;
+  background-color: #840077;
   overflow: hidden;
 }
 
@@ -56,10 +61,6 @@
   font-weight: bolder;
   text-align: center;
   flex-wrap: wrap;
-}
-
-body {
-  background-color: #c790ca63;
 }
 
 .topaside {
