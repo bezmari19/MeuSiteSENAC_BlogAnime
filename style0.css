@@ -70,6 +70,7 @@ body {
   padding: 5px;
   flex: wrap;
   font-family: system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: #ffffff;
   text-align: center;
 }
 
@@ -91,6 +92,7 @@ body {
 
 .estiloFonteArticle {
   padding:20px;
+  color: #ffffff;
   text-transform: uppercase;
   text-shadow: 1px 1px #000000;
   font-family: system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -109,6 +111,7 @@ body {
 
 .estiloFonteArticleSub {
   padding: 20px;
+  color: #ffffff;
   text-transform: capitalize;
   text-shadow: 1px 1px #000000;
   font-family: system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
