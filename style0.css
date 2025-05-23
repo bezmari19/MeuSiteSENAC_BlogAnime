@@ -36,7 +36,7 @@ body {
 
 .header {
   background-color: #4a004ea6;
-  padding: 100px;
+  padding: 180px;
   background-size: cover;
   background-position: center;
   display: flex;
@@ -71,7 +71,7 @@ body {
   background-color: #cd0f9198;
   background-position: center;
   background-size: cover;
-  padding: 5px;
+  padding: 2px;
   flex: wrap;
   font-family: system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   color: #ffffff;
@@ -268,7 +268,7 @@ body {
 .divTextBottomAside {
   background-color: #840077;
   text-align: left;
-  text-decoration:underline;
+  text-decoration: none;
   text-decoration-color: #ff00e1ca;
   color:#ffffff;
   padding: 20px;
@@ -285,6 +285,7 @@ body {
 .fonteBottomAside-p {
   font-size: medium;
   text-shadow: 1px 1px #00000086;
+  text-decoration: none;
   text-align: left;
   font-family: system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   padding:20px;
