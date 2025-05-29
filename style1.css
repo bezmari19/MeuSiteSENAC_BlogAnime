@@ -4,6 +4,10 @@ body {
   background-color: #000000;
 }
 
+#colorhr {
+  border-color: #000000;
+}
+
 .topnav {
   background-color: #840077;
   overflow: hidden;
@@ -67,43 +71,11 @@ body {
   background-color: #cd0f9198;
   background-position: center;
   background-size: cover;
-  padding: 20px;
+  padding: 2px;
   flex: wrap;
   font-family: system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  text-align: center;
-}
-
-.divTitleTopAside {
-  background-color: #84007762;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  padding: 10px;
-}
-
-.textTitleTopAside {
-  color: #ffbbff;
-  text-align: center;
-  text-shadow: 2px 2px #000000;
-  font-family: system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: larger;
-  font-weight: bolder;
-}
-
-.textTopAside {
-  font-family:  system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  padding: 20px;
   color: #ffffff;
-  font-weight: bold;
-  text-shadow: 1px 1px #000000;
-}
-
-.SobreOSiteLink {
-  color: #000000;
-  text-decoration: none;
   text-align: center;
-  text-shadow: 1px 1px#000000;
-
 }
 
 .article {
@@ -124,6 +96,7 @@ body {
 
 .estiloFonteArticle {
   padding:20px;
+  color: #ffffff;
   text-transform: uppercase;
   text-shadow: 1px 1px #000000;
   font-family: system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -142,6 +115,7 @@ body {
 
 .estiloFonteArticleSub {
   padding: 20px;
+  color: #ffffff;
   text-transform: capitalize;
   text-shadow: 1px 1px #000000;
   font-family: system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -294,7 +268,7 @@ body {
 .divTextBottomAside {
   background-color: #840077;
   text-align: left;
-  text-decoration:underline;
+  text-decoration: none;
   text-decoration-color: #ff00e1ca;
   color:#ffffff;
   padding: 20px;
@@ -311,6 +285,7 @@ body {
 .fonteBottomAside-p {
   font-size: medium;
   text-shadow: 1px 1px #00000086;
+  text-decoration: none;
   text-align: left;
   font-family: system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   padding:20px;
@@ -406,7 +381,6 @@ body {
     float: none;
     display: block;
     text-align: center;
-    padding: 10px;
   }
 
   .imgTextContainer {
@@ -437,11 +411,6 @@ body {
     text-align: center;
     padding: 10px;
   }
-
-  .footerBottom {
-    padding: 10px;
-    font-size: small;
-  }
 }
 
 @media (max-width: 480px) {
@@ -451,7 +420,7 @@ body {
   }
 
   .topnav a {
-    padding: 8px;
+    padding: 10px;
     font-size: small;
   }
 
@@ -463,22 +432,13 @@ body {
     max-width: 100%; 
   }
 
-  .imgTextContainer p {
-    font-size: small;
-    padding: 8px;
-  }
-
-  .videosContainer iframe {
-    max-width: 100%; 
-  }
-
   .footer {
-    padding: 8px;
+    padding: 10px;
     font-size: small;
   }
 
   .footerBottom {
-    padding: 8px;
-    font-size: smaller;
+    padding: 10px;
+    font-size: small;
   }
 }
