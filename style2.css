@@ -2,7 +2,7 @@
 
 .header{
   background-image:linear-gradient(to bottom, transparent 0%, #470022 80%), url(https://i.pinimg.com/736x/69/6e/bb/696ebb7a89d2d5a0f354d4d5ac1f1b72.jpg);
-  padding:140px;
+  padding: 140px;
   background-size: cover;
   background-position: center;
   display: flex;
