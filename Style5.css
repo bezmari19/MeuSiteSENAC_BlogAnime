@@ -23,11 +23,7 @@ body {
 
 .header {
     background-image: url(https://i.pinimg.com/originals/69/d2/8c/69d28cb69a870c8ebee0149f7d9fd7a5.gif);
-    padding-top: 70px;
-    padding-right: 70px;
-    padding-bottom: 50px;
-    padding-left: 7px;
-    padding: 20px;
+    padding: 140px;
     background-size: cover;
     background-position: center;
     display: flex;

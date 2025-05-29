@@ -18,13 +18,7 @@
 
 .header {
     background-image: url(https://i.pinimg.com/originals/e8/4e/db/e84edb279472c7ab49e97ec276d4ffda.gif);
-    background-position: top;
-    background-size: cover;
-    padding-top: 70px;
-    padding-right: 70px;
-    padding-bottom: 50px;
-    padding-left: 7px;
-    padding: 20px;
+    padding: 140px;
     display: flex;
     flex-direction: column;
     position: relative; 
