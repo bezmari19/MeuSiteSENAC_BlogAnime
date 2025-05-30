@@ -371,6 +371,19 @@ body {
   color: #840077; 
 }
 
+/*<!-- Adicione este CSS ao seu style0.css para modo escuro -->*/
+
+.dark-mode {
+  background: #181818;
+  color: #f1f1f1;
+}
+.dark-mode .topnav, .dark-mode nav, .dark-mode footer {
+  background: #222;
+}
+.dark-mode a {
+  color: #90cdf4;
+}
+
 @media (max-width: 768px) {
   .header {
     flex-direction: column;
