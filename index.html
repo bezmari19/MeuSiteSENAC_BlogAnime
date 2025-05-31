@@ -16,7 +16,16 @@
     <body>
       <nav>
         <div class="topnav">
-          <button class="toggleTheme" id="toggleTheme">Escuro</button>
+          <div class="controlsNav">
+            <button class="toggleTheme" id="toggleTheme()">
+              <i class="buttomModeLighting" id="temaIcone"></i>
+              <span data-pt="Escuro" data-en="Dark">Escuro</span>
+            </button>
+            <button class="lang-toggle" onclick="toggleLanguage()">
+              <i class="toggleLanguage"></i>
+              <span id="current-lang">EN</span>
+          </button>
+          </div>
           <a href="HomePg.html">HomePg</a>
           <a href="AnimesPg.html">AnimesPg</a>
           <a href="LojinhaPg.html">LojinhaPg</a>
@@ -248,6 +257,7 @@
     </div>
   </nav>
 </footer>
+<script src="javaScript.js"></script>
 </body>
 </main>
 </html>
