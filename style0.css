@@ -25,8 +25,15 @@ header, footer, main {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 20px; /* Mais espaço nas bordas */
+  justify-content: space-between; /* Espaço entre esquerda e direita */
+  padding: 0 30px 0 20px;         /* Espaço nas bordas */
+}
+
+.topnav-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 10px; /* Espaço da borda esquerda */
 }
 
 .controlsNav {
@@ -62,12 +69,44 @@ header, footer, main {
 }
 
 .topnav .controlsNav {
-  margin-right: auto; /* Empurra os links para a direita */
+  /* Remova ou comente a linha abaixo */
+  /* margin-right: auto; */
 }
 
 .topnav a:hover {
   background-color: #cc8ee2f3;
   color: #fff;
+}
+
+.searchForm {
+  display: flex;
+  align-items: center;
+  margin-left: 10px; /* Espaço entre botões e busca */
+}
+
+.searchInput {
+  padding: 5px 10px;
+  border: 1px solid #840077;
+  border-radius: 20px 0 0 20px;
+  outline: none;
+  font-size: 15px;
+}
+
+.searchButton {
+  padding: 5px 10px;
+  border: 1px solid #840077;
+  border-left: none;
+  background: #840077;
+  color: #fff;
+  border-radius: 0 20px 20px 0;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.searchButton i {
+  font-size: 18px;
 }
 
 .header {
@@ -109,7 +148,7 @@ header, footer, main {
   text-align: left;
 }
 
-/* Article */
+
 .article {
   background-color: #99095867;
   padding: 20px;

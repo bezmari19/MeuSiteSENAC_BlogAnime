@@ -10,3 +10,12 @@ function buttonTheme() {
     btnIcon.innerHTML = 'Escuro';
   }
 }
+
+function searchSite(event) {
+  event.preventDefault();
+  const input = document.querySelector('.searchInput');
+  if (input && input.value.trim()) {
+    alert('Você buscou por: ' + input.value.trim());
+    // Aqui você pode implementar a lógica real de busca no site
+  }
+}
