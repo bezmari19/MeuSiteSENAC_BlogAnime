@@ -25,20 +25,23 @@ header, footer, main {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between; /* Espaço entre esquerda e direita */
-  padding: 0 30px 0 20px;         /* Espaço nas bordas */
+  justify-content: space-between;
+  padding: 0 30px 0 20px;
+  min-height: 60px;
 }
 
 .topnav-left {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-left: 10px; /* Espaço da borda esquerda */
+  margin-left: 10px;
 }
 
 .controlsNav {
   display: flex;
+  align-items: center;
   gap: 10px;
+  margin-right: 10px; /* Espaço da borda direita */
 }
 
 .buttonTheme, .languageButton {
@@ -46,31 +49,30 @@ header, footer, main {
   border: 2px solid #000000;
   color: #fff;
   font-size: 15px;
-  cursor: pointes;
-  display: flex;;
+  cursor: pointer;
+  display: flex;
   align-items: center;
   gap: 5px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  transition: background 0.2s;
 }
 
 .topnav a {
   color: #fff;
   text-align: center;
-  padding: 10px 10px; /* Menos espaçamento lateral */
+  padding: 10px 10px;
   text-decoration: none;
   text-shadow: 1px 1px black;
   font-weight: bold;
   font-size: 18px;
   transition: background 0.2s;
-  margin-left: 8px; /* Espaço entre os links */
+  margin-left: 8px;
+  border-radius: 8px;
 }
 
 .topnav a:first-of-type {
-  margin-left: 0; /* Remove margem do primeiro link */
-}
-
-.topnav .controlsNav {
-  /* Remova ou comente a linha abaixo */
-  /* margin-right: auto; */
+  margin-left: 0; 
 }
 
 .topnav a:hover {
@@ -319,6 +321,36 @@ header, footer, main {
   }
   .header {
     padding: 40px 5px;
+  }
+  .topnav {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0 10px;
+  }
+  .topnav-left, .controlsNav {
+    justify-content: center;
+    margin: 8px 0;
+  }
+  .controlsNav {
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-right: 0;
+  }
+  .topnav a {
+    font-size: 16px;
+    padding: 8px 6px;
+  }
+  .buttonTheme, .languageButton {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+  .searchInput {
+    font-size: 14px;
+    padding: 4px 8px;
+  }
+  .searchButton {
+    font-size: 14px;
+    padding: 4px 8px;
   }
 }
 
