@@ -30,7 +30,7 @@ function updateLanguage() {
       }
   });
   
-  document.getElementById("current-lang").textContent = currentLanguage.toLocaleUpperCase() === "pt" ? "eng" : "pt";
+  document.getElementById("current-lang").textContent = currentLanguage.toLocaleLowerCase() === "pt" ? "eng" : "pt";
   
   
   const themeText = document.querySelector(".toggleTheme span");
