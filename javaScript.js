@@ -35,7 +35,7 @@ function updateLanguage() {
   
   const themeText = document.querySelector(".toggleTheme span");
   const isDark = document.body.getAttribute("data-theme") === "dark";
-  const themeKey = isDark ? "theme_light" : "theme_dark";
+  const themeKey = isDark ? "LightTheme" : "DarkTheme";
   themeText.textContent = translations[currentLanguage][themeKey];
 }
 
