@@ -17,14 +17,19 @@ function searchSite(event) {
   if (input && input.value.trim()) {
     const termo = input.value.trim().toLowerCase();
     if (termo.includes('anime') || termo.includes('animes') || termo.includes('anime list') || termo.includes('animes list')) {
-      alert('Você buscou por: ' + termo);
-      input.value = ''; // Limpa o campo de busca
-      // Redireciona para a página de animes
+      input.value = '';
       window.location.href = 'AnimesPg.html';
-    } else {
-      alert('Você buscou por: ' + input.value.trim());
-    }
+    } else if (termo.includes('sobre nós') || termo.includes('sobre nos') || termo.includes('sobre a página') || termo.includes('Sobre Noss') || termo.includes('Sobre a Página') || termo.includes("Sobre Nós")) {
+      input.value = ''; 
+      window.location.href = 'SobreNosPg.html';
+    } else if (termo.includes("noticias") || termo.includes("notícias") || termo.includes("Noticias") || termo.includes("Notícias") || termo.includes("notícias de anime") || termo.includes("noticias de animes")) {
+      input.value = '';
+      window.location.href = 'NoticiasPg.html';
+    } else if (termo.includes("Home") || termo.includes("home") || termo.includes("Pagina Inicial") || termo.includes("pagina inicial") || termo.includes("página inicial") || termo.includes("Página Inicial")) {
+      input.value = '';
+      window.location.href = 'index.html';
   }
+
 }
 
 function languageButton() {
