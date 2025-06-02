@@ -11,26 +11,46 @@ function buttonTheme() {
   }
 }
 
-function searchSite(event) {
-  event.preventDefault();
+function searchSite(event) {event.preventDefault();
   const input = document.querySelector('.searchInput');
   if (input && input.value.trim()) {
     const termo = input.value.trim().toLowerCase();
-    if (termo.includes('anime') || termo.includes('animes') || termo.includes('anime list') || termo.includes('animes list')) {
+    if (
+      termo.includes('anime') ||
+      termo.includes('animes') ||
+      termo.includes('anime list') ||
+      termo.includes('animes list')
+    ) {
       input.value = '';
       window.location.href = 'AnimesPg.html';
-    } else if (termo.includes('sobre nós') || termo.includes('sobre nos') || termo.includes('sobre a página') || termo.includes('Sobre Noss') || termo.includes('Sobre a Página') || termo.includes("Sobre Nós")) {
-      input.value = ''; 
-      window.location.href = 'SobreNosPg.html';
-    } else if (termo.includes("noticias") || termo.includes("notícias") || termo.includes("Noticias") || termo.includes("Notícias") || termo.includes("notícias de anime") || termo.includes("noticias de animes")) {
+    } else if (
+      termo.includes('sobre nós') ||
+      termo.includes('sobre nos') ||
+      termo.includes('sobre a página') ||
+      termo.includes('sobre a pagina')
+    ) {
       input.value = '';
-      window.location.href = 'NoticiasPg.html';
-    } else if (termo.includes("Home") || termo.includes("home") || termo.includes("Pagina Inicial") || termo.includes("pagina inicial") || termo.includes("página inicial") || termo.includes("Página Inicial")) {
+      window.location.href = 'SobreNosPg.html';
+    } else if (
+      termo.includes('noticias') ||
+      termo.includes('notícias') ||
+      termo.includes('notícias de anime') ||
+      termo.includes('noticias de animes')
+    ) {
+      input.value = '';
+      window.location.href = 'NoticiaPg.html';
+    } else if (
+      termo.includes('home') ||
+      termo.includes('pagina inicial') ||
+      termo.includes('página inicial')
+    ) {
       input.value = '';
       window.location.href = 'index.html';
+    } 
   }
-
 }
+
+
 
 function languageButton() {
   const btnIcon = document.querySelector('.languageButton i');
