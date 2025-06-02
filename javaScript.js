@@ -50,8 +50,6 @@ function searchSite(event) {event.preventDefault();
   }
 }
 
-
-
 function languageButton() {
   const btnIcon = document.querySelector('.languageButton i');
   const body = document.body;
@@ -64,6 +62,8 @@ function languageButton() {
     btnIcon.innerHTML = 'Português';
   }
 }
+
+
 
 
 
