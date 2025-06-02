@@ -193,4 +193,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+// Exporta as funções para serem usadas em outros arquivos, se necessário
+
+
+
+
+
+
 
