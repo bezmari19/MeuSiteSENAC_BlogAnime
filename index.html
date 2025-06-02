@@ -14,6 +14,22 @@
  
   <main>
     <body>
+      <div class="overlay">
+        <div class="popup is_active">
+          <h2>Bem-vindo ao Mundo dos Animes!</h2>
+          <p>Explore nosso site para descobrir as últimas notícias, animes e muito mais.</p>
+          <!-- 
+            Este link (<a>) com a classe "close" é utilizado para criar um botão de fechar (normalmente representado pelo símbolo "&times;", que é um "X"). 
+            Geralmente é usado em modais, pop-ups ou caixas de diálogo para permitir que o usuário feche ou descarte o elemento clicando neste botão.
+            O atributo href="#" impede a navegação para outra página, mantendo o usuário na mesma tela.
+          -->
+          <a class="close closePopUp" href="#">&times;</a>
+
+          <form>
+            <input type="text" placeholder="Digite seu nome" class="inputName" required>
+          </form>
+        </div>
+      </div>
       <nav>
         <div class="topnav">
           <div class="controlsNav">
