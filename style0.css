@@ -6,6 +6,35 @@
   padding: 0;
 }
 
+.overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  bottom: 0;
+  left: 0;
+  opacity: 1;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: opacity 500ms;
+  display: none; /* Inicializa escondido */
+}
+
+.overlay.is_active {
+  display: block; /* Mostra quando está ativo */
+}
+
+.popup {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  left: 50%;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 600px;
+  z-index: 1001; /* Certifique-se de que o popup esteja acima do overlay */
+}
+
 body {
   background-color: #84007769;
   font-family: system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;

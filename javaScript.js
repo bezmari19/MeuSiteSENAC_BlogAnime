@@ -1,9 +1,30 @@
+// Este arquivo contém funções JavaScript que implementam funcionalidades de tema e busca no site.
+// Ele também inclui a manipulação de cookies para exibir ou ocultar um pop-up de boas-vindas.
+// Importa a biblioteca de cookies para manipulação de cookies.
+import Cookies from "https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js";
+// Função responsável por verificar se o pop-up de boas-vindas deve ser exibido.
+const $overlay = document.querySelector(".overlay");
+if (!Cookies.get("popUpClosed")) {
+  $overlay.classList.add("active");
+  const $popup = document.querySelector(".popup");
+  $popup.classList.add("active");
+  $popup.querySelector(".close").addEventListener("click", function() {
+    $overlay.classList.remove("active");
+    $popup.classList.remove("active");
+  });
+  $closeButton.addEventListener("click", function() {
+    Cookies.set("popUpClosed", "true", { expires: 7 });
+    $overlay.classList.remove("active");
+    $popup.classList.remove("active");
+  });
+}
 const $closeButton = document.querySelector(".closePopUp");
 $closeButton.addEventListener("click", function() {
   Cookies.set("popUpClosed", "true", { expires: 7 });
-})
-// Função responsável por alternar o tema do site entre claro e escuro.
+});
 
+
+// Função responsável por alternar o tema do site entre claro e escuro.
 function buttonTheme() {
   const btnIcon = document.querySelector(".buttonTheme i");
   const body = document.body;
@@ -61,6 +82,7 @@ function searchSite(event) {
   }
 }
 
+// Função responsável por alternar o idioma do site entre Português e Inglês.
 function languageButton() {
   const btnIcon = document.querySelector(".languageButton i");
   const body = document.body;
