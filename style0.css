@@ -7,7 +7,7 @@
 }
 
 .overlay {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(132, 0, 119, 0.85); /* Roxo escuro com transparência */
   bottom: 0;
   left: 0;
   opacity: 1;
@@ -15,24 +15,91 @@
   right: 0;
   top: 0;
   transition: opacity 500ms;
-  display: none; /* Inicializa escondido */
+  display: none;
+  z-index: 1000;
 }
 
-.overlay.is_active {
-  display: block; /* Mostra quando está ativo */
+.overlay.is_active,
+.overlay.active {
+  display: block;
 }
 
 .popup {
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #840077 80%, #d587e7 100%);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px 0 #00000060;
   left: 50%;
   position: fixed;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 90%;
-  max-width: 600px;
-  z-index: 1001; /* Certifique-se de que o popup esteja acima do overlay */
+  width: 95%;
+  max-width: 420px;
+  z-index: 1001;
+  padding: 36px 28px 28px 28px;
+  color: #fff;
+  text-align: center;
+  border: 3px solid #fff;
+}
+
+.popup h2 {
+  color: #fff;
+  text-shadow: 2px 2px #430549;
+  font-size: 2rem;
+  margin-bottom: 12px;
+  font-family: system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.popup p {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px #43054966;
+}
+
+.popup .close,
+.popup .closePopUp {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  font-size: 2.2rem;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 1002;
+  transition: color 0.2s;
+}
+
+.popup .close:hover,
+.popup .closePopUp:hover {
+  color: #d587e7;
+}
+
+.InfoForms {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.InfoForms input[type="text"],
+.InfoForms input[type="email"] {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1.5px solid #d587e7;
+  font-size: 1rem;
+  margin-bottom: 8px;
+  outline: none;
+  background: #fff;
+  color: #840077;
+  transition: border 0.2s;
+}
+
+.InfoForms input[type="text"]:focus,
+.InfoForms input[type="email"]:focus {
+  border: 2px solid #840077;
 }
 
 body {
