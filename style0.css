@@ -7,7 +7,7 @@
 }
 
 .overlay {
-  background-color: rgba(132, 0, 119, 0.85); /* Roxo escuro com transparência */
+  background-color: rgba(132, 0, 119, 0.397); /* Roxo escuro com transparência */
   bottom: 0;
   left: 0;
   opacity: 1;
@@ -15,12 +15,17 @@
   right: 0;
   top: 0;
   transition: opacity 500ms;
-  display: none;
-  z-index: 1000;
+  display: none; /* Oculta a sobreposição por padrão */
+  z-index: 1000; /* Garante que a sobreposição fique acima de outros elementos */
 }
 
-.overlay.is_active,
+.overlay.is_active {
+  display: block;
+  z-index: 1000;
+}
 .overlay.active {
+  opacity: 1;
+  transition: opacity 500ms;
   display: block;
 }
 
