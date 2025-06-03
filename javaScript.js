@@ -70,7 +70,6 @@ function languageButton() {
   }
 }
 
-
 function sugestionButton() {
   const email = document.getElementById('exampleFormControlInput1').value.trim();
   const mensagem = document.getElementById('exampleFormControlTextarea1').value.trim();
@@ -80,10 +79,14 @@ function sugestionButton() {
     return;
   }
 
-  // Aqui você pode enviar para um backend se desejar
+  // Salva as informações em cookies por 7 dias
+  document.cookie = `sugestao_email=${encodeURIComponent(email)}; max-age=${60 * 60 * 24 * 7}; path=/`;
+  document.cookie = `sugestao_mensagem=${encodeURIComponent(mensagem)}; max-age=${60 * 60 * 24 * 7}; path=/`;
+
   alert('Sugestão enviada com sucesso!\n\nE-mail: ' + email + '\nMensagem: ' + mensagem);
 
   // Limpa os campos após o envio
   document.getElementById('exampleFormControlInput1').value = '';
   document.getElementById('exampleFormControlTextarea1').value = '';
 }
+
