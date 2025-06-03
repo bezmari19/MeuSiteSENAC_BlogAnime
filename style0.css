@@ -7,13 +7,22 @@
 }
 
 body {
-  background-color: #84007769;
+  background-color: #f0f0f0;
+  color: #333;
   font-family: system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 html, body {
   width: 100%;
   min-height: 100vh;
+}
+
+.header {
+  background-image: url('https://64.media.tumblr.com/7d82209b7fa8c87bd3b416c32290aea0/cc5cf72dc0153b78-8e/s1280x1920/404363a136e232ee9340ad0eadae17154adf0c07.gifv');
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  color: #fff;
 }
 
 header, footer, main {
