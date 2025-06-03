@@ -1,5 +1,3 @@
-
-
 // Função responsável por alternar o tema do site entre claro e escuro.
 function buttonTheme() {
   const btnIcon = document.querySelector(".buttonTheme i");
@@ -73,9 +71,19 @@ function languageButton() {
 }
 
 
+function sugestionButton() {
+  const email = document.getElementById('exampleFormControlInput1').value.trim();
+  const mensagem = document.getElementById('exampleFormControlTextarea1').value.trim();
 
+  if (!email || !mensagem) {
+    alert('Por favor, preencha o e-mail e a mensagem.');
+    return;
+  }
 
+  // Aqui você pode enviar para um backend se desejar
+  alert('Sugestão enviada com sucesso!\n\nE-mail: ' + email + '\nMensagem: ' + mensagem);
 
-
-
-
+  // Limpa os campos após o envio
+  document.getElementById('exampleFormControlInput1').value = '';
+  document.getElementById('exampleFormControlTextarea1').value = '';
+}

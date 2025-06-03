@@ -346,6 +346,17 @@ footer {
   gap: 6px;
 }
 
+.sugestion-button {
+  background: #d587e7;
+  color: #430549;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s, color 0.2s;
+}
+
 .footerBottom nav {
   display: flex;
   flex-wrap: wrap;
