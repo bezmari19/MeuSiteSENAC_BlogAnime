@@ -101,3 +101,28 @@ function sugestionButton() {
   document.getElementById('exampleFormControlTextarea1').value = '';
 }
 
+// Carrossel do aside
+let carouselIndex = 0;
+
+function showCarouselSlide(index) {
+  const slide = document.querySelector('.carousel-slide');
+  const images = slide.querySelectorAll('img');
+  if (!images.length) return;
+  if (index >= images.length) carouselIndex = 0;
+  if (index < 0) carouselIndex = images.length - 1;
+  else carouselIndex = index;
+
+  slide.style.transform = `translateX(-${carouselIndex * images[0].clientWidth}px)`;
+}
+
+function moveCarousel(direction) {
+  showCarouselSlide(carouselIndex + direction);
+}
+
+// Inicializa o carrossel ao carregar a página
+window.addEventListener('DOMContentLoaded', () => {
+  showCarouselSlide(0);
+  // Responsivo: ajusta ao redimensionar
+  window.addEventListener('resize', () => showCarouselSlide(carouselIndex));
+});
+
