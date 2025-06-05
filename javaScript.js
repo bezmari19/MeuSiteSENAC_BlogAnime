@@ -3,14 +3,31 @@ function buttonTheme() {
   const btnIcon = document.querySelector(".buttonTheme i"); // Seleciona o ícone do botão de tema
   const body = document.body; // Seleciona o elemento body
   body.classList.toggle("dark-mode"); // Alterna a classe 'dark-mode' no body
+  // Salva a preferência de tema no localStorage
   if (body.classList.contains("dark-mode")) {
     btnIcon.className = "bi bi-sun-fill"; // Altera o ícone para sol
     btnIcon.innerHTML = "Claro"; // Altera o texto para "Claro"
+    localStorage.setItem("theme", "dark");
   } else {
     btnIcon.className = "bi bi-moon-stars-fill"; // Altera o ícone para lua
     btnIcon.innerHTML = "Escuro"; // Altera o texto para "Escuro"
+    localStorage.setItem("theme", "light");
   }
 }
+
+// Ao carregar a página, aplica as preferências salvas
+window.addEventListener('DOMContentLoaded', () => {
+  // Tema
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") {
+    document.body.classList.add("dark-mode");
+    const btnIcon = document.querySelector(".buttonTheme i");
+    if (btnIcon) {
+      btnIcon.className = "bi bi-sun-fill";
+      btnIcon.innerHTML = "Claro";
+    }
+  }
+});
 
 // Função responsável por tratar a busca do usuário no site.
 // Ela previne o comportamento padrão do formulário, pega o valor digitado no campo de busca,
@@ -63,14 +80,34 @@ function languageButton() {
   const btnIcon = document.querySelector(".languageButton i"); // Seleciona o ícone do botão de idioma
   const body = document.body; // Seleciona o body
   body.classList.toggle("english_mode"); // Alterna a classe 'english_mode'
+  // Salva a preferência de idioma no localStorage
   if (body.classList.contains("english_mode")) {
     btnIcon.className = "bi bi-translate"; // Mantém o ícone de tradução
     btnIcon.innerHTML = " English"; // Altera o texto para "English"
+    localStorage.setItem("language", "en");
   } else {
     btnIcon.className = "bi bi-translate"; // Mantém o ícone de tradução
     btnIcon.innerHTML = "Português"; // Altera o texto para "Português"
+    localStorage.setItem("language", "pt");
   }
+  changeLanguageContent(); // Atualiza o conteúdo da página (se usar tradução dinâmica)
 }
+
+  // Idioma
+  const savedLang = localStorage.getItem("language");
+  if (savedLang === "en") {
+    document.body.classList.add("english_mode");
+    const btnIcon = document.querySelector(".languageButton i");
+    if (btnIcon) {
+      btnIcon.className = "bi bi-translate";
+      btnIcon.innerHTML = " English";
+    }
+    changeLanguageContent && changeLanguageContent();
+  }
+showCarouselSlide(0);
+// Responsivo: ajusta ao redimensionar
+window.addEventListener('resize', () => showCarouselSlide(carouselIndex));
+
 
 // Função responsável por tratar o envio de sugestões pelo usuário.
 function sugestionButton() {
@@ -119,10 +156,5 @@ function moveCarousel(direction) {
   showCarouselSlide(carouselIndex + direction);
 }
 
-// Inicializa o carrossel ao carregar a página
-window.addEventListener('DOMContentLoaded', () => {
-  showCarouselSlide(0);
-  // Responsivo: ajusta ao redimensionar
-  window.addEventListener('resize', () => showCarouselSlide(carouselIndex));
-});
+
 
