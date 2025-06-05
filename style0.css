@@ -22,6 +22,7 @@ body {
   line-height: 1.6;
   min-height: 100vh;
   box-shadow: 0 0 0 100vmax #f0e6ff inset;
+  overflow-x: hidden;
 }
 
 /* =========================
@@ -33,7 +34,7 @@ body {
   backdrop-filter: blur(2px);
   border: 1.5px solid #fff2;
   box-shadow: 0 8px 32px #84007733;
-  padding: 220px 10px 120px 10px; /* Aumenta o topo e base */
+  padding: 220px 10px 120px 10px;
   background-size: cover;
   background-position: center;
   display: flex;
@@ -1324,9 +1325,36 @@ footer {
   }
 }
 
-/* Ajuste para evitar overflow horizontal */
-body {
-  overflow-x: hidden;
+/* =========================
+   LIGHT MODE (Padrão)
+========================= */
+body,
+body.light-mode {
+  background: linear-gradient(135deg, #f0e6ff 0%, #f9f6ff 100%);
+  color: #2d0036;
+}
+
+body.light-mode .header,
+.header {
+  background: url("https://images.squarespace-cdn.com/content/v1/5ccb050e809d8e130ff3433f/1569528582331-8KUZ08PVWGZTL4XFFMAC/sailor-moon.gif?format=2500w") no-repeat center bottom;
+  background-attachment: fixed;
+  backdrop-filter: blur(2px);
+  border: 1.5px solid #fff2;
+  box-shadow: 0 8px 32px #84007733;
+  padding: 220px 10px 120px 10px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center; 
+  text-align: center;       
+}
+
+body.light-mode .footer,
+.footer {
+  background: linear-gradient(135deg, #840077 80%, #d587e7 100%);
+  color: #fff;
 }
 
 /* =========================
@@ -1410,4 +1438,9 @@ body.dark-mode input:focus,
 body.dark-mode textarea:focus {
   border-color: #fff;
 }
+
+/* =========================
+   RESTANTE DO CSS (Responsivo, etc)
+========================= */
+/* ...demais regras responsivas e utilitárias já existentes... */
 
