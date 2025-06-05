@@ -31,26 +31,9 @@ function languageButton() {
       }
   });
 
-    document.getElementById('').textContent = traducaoRecorrente.toUpperCase() === 'PT' ? 'EN' : 'PT';
+    document.getElementById('current-lang').textContent = traducaoRecorrente.toUpperCase() === 'PT' ? 'EN' : 'PT';
   }
-
-  // Alterna o idioma do site entre Português e Inglês
-function languageButton() {
-  const btnIcon = document.querySelector(".languageButton i");
-  const body = document.body;
-  body.classList.toggle("english_mode");
-  if (body.classList.contains("english_mode")) {
-    btnIcon.className = "bi bi-translate";
-    btnIcon.innerHTML = "en";
-    localStorage.setItem("language", "en");
-  } else {
-    btnIcon.className = "bi bi-translate";
-    btnIcon.innerHTML = "pt";
-    localStorage.setItem("language", "pt");
-  }
-  atualizaTraducao();
-}
-
+  
 
 // Alterna o tema do site entre claro e escuro
 function buttonTheme() {
