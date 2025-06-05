@@ -31,7 +31,7 @@ function languageButton() {
       }
   });
 
-    document.getElementById('').textContent = traducaoRecorrente.toUpperCase() === 'PORTUGUÊS' ? 'EN' : 'PT';
+    document.getElementById('').textContent = traducaoRecorrente.toUpperCase() === 'PT' ? 'EN' : 'PT';
   }
 
   // Alterna o idioma do site entre Português e Inglês
@@ -41,11 +41,11 @@ function languageButton() {
   body.classList.toggle("english_mode");
   if (body.classList.contains("english_mode")) {
     btnIcon.className = "bi bi-translate";
-    btnIcon.innerHTML = " English";
+    btnIcon.innerHTML = "en";
     localStorage.setItem("language", "en");
   } else {
     btnIcon.className = "bi bi-translate";
-    btnIcon.innerHTML = "Português";
+    btnIcon.innerHTML = "pt";
     localStorage.setItem("language", "pt");
   }
   atualizaTraducao();
