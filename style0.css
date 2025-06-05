@@ -1,6 +1,3 @@
-/* =========================
-   RESET E BASE
-========================= */
 @charset "UTF-8";
 
 * {
@@ -29,19 +26,37 @@ body {
    HEADER
 ========================= */
 .header {
-  background: url("https://images.squarespace-cdn.com/content/v1/5ccb050e809d8e130ff3433f/1569528582331-8KUZ08PVWGZTL4XFFMAC/sailor-moon.gif?format=2500w") no-repeat center bottom;
+  background: url("https://images.squarespace-cdn.com/content/v1/5ccb050e809d8e130ff3433f/1569528582331-8KUZ08PVWGZTL4XFFMAC/sailor-moon.gif?format=2500w") no-repeat center center;
   background-attachment: fixed;
-  backdrop-filter: blur(2px);
+  background-size: cover;
+  min-height: 480px;      /* aumente a altura mínima */
+  height: 70vh;           /* aumente a altura relativa à tela */
+  max-height: 820px;      /* aumente a altura máxima */
   border: 1.5px solid #fff2;
   box-shadow: 0 8px 32px #84007733;
-  padding: 220px 10px 120px 10px;
-  background-size: cover;
-  background-position: center;
   display: flex;
   flex-direction: column;
   align-items: center; 
   justify-content: center; 
-  text-align: center;       
+  text-align: center;
+  padding: 80px 0;        /* mais espaço interno */
+  margin-top: 0;          
+  position: relative;
+  overflow: hidden;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(132,0,119,0.10) 0%, rgba(0,0,0,0.13) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.header > * {
+  position: relative;
+  z-index: 2;
 }
 
 .header a {
@@ -66,17 +81,23 @@ header, footer, main {
    NAVEGAÇÃO
 ========================= */
 .topnav {
-  background: rgba(132,0,119,0.95);
-  box-shadow: 0 2px 12px #84007733;
-  border: 1.5px solid #fff2;
-  margin: 0 auto 18px auto;
-  max-width: 1200px;
-  padding: 0 16px;
+  background: linear-gradient(90deg, rgba(132,0,119,0.96) 60%, rgba(213,135,231,0.92) 100%);
+  box-shadow: 0 6px 28px #84007755, 0 1.5px 0 #fff2 inset;
+  border-radius: 28px;
+  margin: 0 auto 8px auto;      /* Menos espaço abaixo, gruda na header */
+  max-width: 98vw;
+  width: 98vw;
+  padding: 14px 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 20px;
+  backdrop-filter: blur(8px);
+  transition: background 0.3s, box-shadow 0.3s;
+  border: 2px solid #fff3;
+  position: relative;
+  z-index: 10;
 }
 
 .topnav-left {
@@ -94,27 +115,47 @@ header, footer, main {
 }
 
 .topnav a {
-  font-size: 1.13rem;
-  padding: 11px 20px;
-  border-radius: 18px;
-  margin: 0 6px;
-  font-weight: 500;
-  background: rgba(255,255,255,0.10);
+  font-size: 1.15rem;
+  padding: 13px 32px;
+  border-radius: 20px;
+  margin: 0 10px;
+  font-weight: 600;
+  background: rgba(255,255,255,0.15);
   color: #fff;
-  transition: background 0.2s, color 0.2s, transform 0.15s, box-shadow 0.2s;
-  box-shadow: 0 2px 8px #84007722;
+  text-shadow: 1px 1px #43054944;
+  transition: background 0.22s, color 0.22s, transform 0.18s, box-shadow 0.22s;
+  box-shadow: 0 2px 12px #84007722;
   border: none;
   display: inline-block;
   text-align: center;
   text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 1px;
+}
+
+.topnav a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #d587e7 0%, #840077 100%);
+  transition: width 0.3s, left 0.3s;
 }
 
 .topnav a:hover, .topnav a:focus {
   background: #fff;
   color: #840077;
-  transform: scale(1.07);
-  box-shadow: 0 4px 18px #84007744;
+  transform: scale(1.08);
+  box-shadow: 0 4px 18px #84007755;
   text-decoration: none;
+}
+
+.topnav a:hover::after, .topnav a:focus::after {
+  width: 80%;
+  left: 10%;
 }
 
 .buttonTheme, .languageButton {
@@ -122,20 +163,26 @@ header, footer, main {
   border: none;
   color: #fff;
   font-size: 1.08rem;
-  padding: 9px 22px;
+  padding: 11px 28px;
   border-radius: 22px;
-  margin: 0 6px;
+  margin: 0 8px;
   box-shadow: 0 2px 12px #d587e766;
-  transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.15s;
+  transition: background 0.22s, color 0.22s, box-shadow 0.22s, transform 0.18s;
   font-weight: bold;
   display: inline-block;
+  cursor: pointer;
+  letter-spacing: 1px;
 }
 
-.buttonTheme:hover, .languageButton:hover {
+.buttonTheme:hover,
+.languageButton:hover,
+.buttonTheme:focus,
+.languageButton:focus {
   background: linear-gradient(90deg, #840077 0%, #d587e7 100%);
   color: #fff;
   box-shadow: 0 4px 18px #84007799;
-  transform: scale(1.08);
+  transform: scale(1.10);
+  outline: none;
 }
 
 .searchForm {
@@ -701,393 +748,6 @@ footer {
 }
 
 /* =========================
-   FOOTER
-========================= */
-footer {
-  background: linear-gradient(135deg, #840077 80%, #d587e7 100%);
-  color: #fff;
-  padding: 40px 0 0 0;
-  margin-top: 40px;
-  font-family: system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-}
-
-.footer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 32px;
-  padding: 0 5vw;
-}
-
-#columnFooter {
-  flex: 1 1 220px;
-  min-width: 220px;
-  margin-bottom: 24px;
-}
-
-.footer-div-1, .footer-div-2, .footer-div-3, .footer-div-4 {
-  background: rgba(255,255,255,0.07);
-  border-radius: 12px;
-  padding: 18px 16px;
-  box-shadow: 0 2px 8px #00000022;
-}
-
-.footer-div-column1 h1,
-.footer-div-column2 h1,
-.footer-div-column3 h1,
-.footer-div-column4 h1 {
-  font-size: 1.2rem;
-  color: #fff;
-  margin-bottom: 10px;
-  text-shadow: 1px 1px #430549;
-}
-
-.footer ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer ul li {
-  margin-bottom: 8px;
-}
-
-.footer ul li a {
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.2s;
-  font-weight: 500;
-}
-
-.footer ul li a:hover {
-  color: #d587e7;
-  text-decoration: underline;
-}
-
-/* =========================
-   SUGESTÕES
-========================= */
-.sugestions {
-  flex: 1 1 320px;
-  min-width: 240px;
-  margin-bottom: 0;
-  background: rgba(255,255,255,0.10);
-  border-radius: 12px;
-  padding: 18px 16px 10px 16px;
-  margin-bottom: 24px;
-  box-shadow: 0 2px 8px #00000022;
-}
-
-.sugestions h1 {
-  font-size: 1.2rem;
-  color: #fff;
-  margin-bottom: 10px;
-  text-shadow: 1px 1px #430549;
-}
-
-.sugestions label {
-  display: block;
-  margin-top: 12px;
-  margin-bottom: 4px;
-  color: #fff;
-  font-weight: 500;
-}
-
-.sugestions input[type="email"] {
-  width: 100%;
-  padding: 8px 12px;
-  border-radius: 6px;
-  border: 1.5px solid #d587e7;
-  margin-bottom: 10px;
-  font-size: 1rem;
-  outline: none;
-  background: #fff;
-  color: #840077;
-  transition: border 0.2s;
-}
-
-.sugestions input[type="email"]:focus {
-  border: 2px solid #840077;
-}
-
-.SugestionsBox {
-  flex: 1 1 320px;
-  min-width: 240px;
-  margin-bottom: 0;
-  background: rgba(255,255,255,0.10);
-  border-radius: 12px;
-  padding: 18px 16px 24px 16px;
-  margin-bottom: 24px;
-  box-shadow: 0 2px 8px #00000022;
-  display: flex;
-  flex-direction: column;
-}
-
-.SugestionsBox label {
-  margin-bottom: 4px;
-  color: #fff;
-  font-weight: 500;
-}
-
-.SugestionsBox textarea {
-  width: 100%;
-  min-height: 80px;
-  padding: 8px 12px;
-  border-radius: 6px;
-  border: 1.5px solid #d587e7;
-  font-size: 1rem;
-  outline: none;
-  background: #fff;
-  color: #840077;
-  resize: vertical;
-  transition: border 0.2s;
-}
-
-.SugestionsBox textarea:focus {
-  border: 2px solid #840077;
-}
-
-/* =========================
-   FOOTER BOTTOM
-========================= */
-.footerBottom {
-  background: #181818;
-  color: #fff;
-  border-radius: 0 0 18px 18px;
-  font-size: 1.08rem;
-  padding: 32px 0 22px 0;
-  box-shadow: 0 -4px 24px #00000099;
-  border-top: 3px solid #d587e7;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-  margin-top: 28px;
-  font-weight: 600;
-  width: 100vw;
-  max-width: 100vw;
-  left: 50%;
-  right: 0;
-  position: relative;
-  transform: translateX(-50%);
-  box-sizing: border-box;
-}
-
-.footerBottom nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 26px;
-  margin-bottom: 12px;
-}
-
-.footerBottom a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  padding: 10px 24px;
-  border-radius: 12px;
-  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
-  background: rgba(255,255,255,0.10);
-  margin: 0 7px;
-  box-shadow: 0 2px 10px #00000033;
-  letter-spacing: 1px;
-}
-
-.footerBottom a:hover {
-  background: #fff;
-  color: #181818;
-  text-decoration: underline;
-  box-shadow: 0 4px 18px #84007744;
-}
-
-/* =========================
-   NOTÍCIAS MAIS RELEVANTES
-========================= */
-.noticiaLink {
-  text-decoration: none;
-  color: #840077;
-  transition: color 0.2s;
-  font-weight: bold;
-}
-.noticiaLink:hover {
-  color: #d587e7;
-  text-decoration: underline;
-}
-
-.estiloFonteArticleSub {
-  font-size: 1.3rem;
-  color: #840077;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-
-.section.column.bottom {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 18px 0 28px 0;
-}
-
-.topSection.imgTextContainer {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 24px;
-  background: rgba(132,0,119,0.07);
-  border-radius: 16px;
-  box-shadow: 0 2px 12px #84007722;
-  padding: 18px;
-  max-width: 900px;
-  width: 100%;
-}
-
-.topSection.imgTextContainer img {
-  width: 320px;
-  max-width: 90vw;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px #84007733;
-}
-
-.imgTextContainer {
-  padding: 10px 14px;
-  gap: 14px;
-  max-width: 700px;
-}
-
-.imgTextContainer img {
-  width: 180px;
-  height: 110px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-
-.divTextArticle {
-  flex: 1;
-  background: rgba(132,0,119,0.06);
-  border-radius: 10px;
-  padding: 14px 18px;
-  color: #2d0036;
-  font-size: 1.08rem;
-  font-weight: 500;
-  box-shadow: 0 1px 4px #84007711;
-}
-
-.estiloFonteArticle {
-  font-size: 1.5rem;
-  color: #840077;
-  font-weight: bold;
-  letter-spacing: 1px;
-}
-
-.estiloFonteArticleSub {
-  font-size: 1.15rem;
-  color: #d587e7;
-  font-weight: bold;
-  letter-spacing: 0.5px;
-}
-
-.estiloFonteArticleP {
-  color: #430549;
-  font-size: 0.98rem;
-  font-weight: 400;
-}
-
-/* =========================
-   CARROSSEL NO ASIDE
-========================= */
-.carousel-container {
-  position: relative;
-  width: 600px;
-  max-width: 98vw;
-  margin: 36px auto 24px auto;
-  overflow: hidden;
-  border-radius: 22px;
-  box-shadow: 0 6px 32px #84007755;
-  background: #fff;
-}
-
-.carousel-slide {
-  display: flex;
-  transition: transform 0.5s cubic-bezier(.77,0,.18,1);
-  width: 100%;
-}
-
-.carousel-item {
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-}
-
-.carousel-slide img {
-  width: 600px;
-  max-width: 98vw;
-  height: 340px;
-  object-fit: cover;
-  border-radius: 22px;
-  flex-shrink: 0;
-  transition: filter 0.2s;
-}
-
-.carousel-caption {
-  position: absolute;
-  bottom: 18px;
-  left: 0;
-  width: 100%;
-  text-align: center;
-}
-
-.carousel-caption a {
-  background: rgba(0,0,0,0.68);
-  color: #fff;
-  padding: 10px 22px;
-  border-radius: 16px;
-  font-size: 1.1rem;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.2s, color 0.2s;
-  box-shadow: 0 2px 8px #00000055;
-}
-
-.carousel-caption a:hover {
-  background: #d587e7;
-  color: #181818;
-}
-
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: linear-gradient(135deg, #840077 60%, #d587e7 100%);
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 48px;
-  height: 48px;
-  font-size: 2rem;
-  cursor: pointer;
-  z-index: 2;
-  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
-  box-shadow: 0 2px 12px #84007733;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0.92;
-}
-
-.carousel-btn.prev { left: 18px; }
-.carousel-btn.next { right: 18px; }
-
-.carousel-btn:hover {
-  background: linear-gradient(135deg, #d587e7 60%, #840077 100%);
-  transform: translateY(-50%) scale(1.12);
-  box-shadow: 0 4px 18px #84007777;
-}
-
-/* =========================
    SECTIONS DE VÍDEOS RELEVANTES
 ========================= */
 .videosContainer {
@@ -1173,12 +833,6 @@ footer {
   letter-spacing: 0.5px;
 }
 
-.estiloFonteArticleP {
-  color: #430549;
-  font-size: 0.98rem;
-  font-weight: 400;
-}
-
 /* =========================
    RESPONSIVO
 ========================= */
@@ -1205,6 +859,13 @@ footer {
     left: 6px;
     right: 6px;
   }
+  .header {
+    min-height: 200px;
+    height: 32vh;
+    max-height: 320px;
+    background-size: contain;
+    padding: 0;
+  }
 }
 @media (max-width: 1024px) {
   .header { padding: 60px 4vw 40px 4vw; }
@@ -1226,6 +887,13 @@ footer {
   }
 }
 @media (max-width: 600px) {
+  .header {
+    min-height: 220px;
+    height: 40vh;
+    max-height: 340px;
+    background-size: contain;
+    padding: 0;
+  }
   .header { padding: 32px 2vw 18px 2vw; font-size: 1rem; }
   .footer, .footerBottom, .SugestionsBox, .sugestions { padding: 10px 4px; border-radius: 10px; }
   .topnav a, .buttonTheme, .languageButton { font-size: 0.98rem; padding: 8px 8px; }
@@ -1326,121 +994,133 @@ footer {
 }
 
 /* =========================
-   LIGHT MODE (Padrão)
+   DARK MODE
 ========================= */
-body,
-body.light-mode {
-  background: linear-gradient(135deg, #f0e6ff 0%, #f9f6ff 100%);
-  color: #2d0036;
+/* Dark Mode CSS for Sailor Moon Fan Page */
+
+body.dark-mode {
+  background: linear-gradient(135deg, #1a0823 0%, #2d0036 100%);
+  color: #f3eaff;
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+  min-height: 100vh;
+  box-shadow: 0 0 0 100vmax #1a0823 inset;
+  overflow-x: hidden;
 }
 
-body.light-mode .header,
-.header {
-  background: url("https://images.squarespace-cdn.com/content/v1/5ccb050e809d8e130ff3433f/1569528582331-8KUZ08PVWGZTL4XFFMAC/sailor-moon.gif?format=2500w") no-repeat center bottom;
+body.dark-mode .header {
+  background: url("https://images.squarespace-cdn.com/content/v1/5ccb050e809d8e130ff3433f/1569528582331-8KUZ08PVWGZTL4XFFMAC/sailor-moon.gif?format=2500w") no-repeat center center;
   background-attachment: fixed;
-  backdrop-filter: blur(2px);
-  border: 1.5px solid #fff2;
-  box-shadow: 0 8px 32px #84007733;
-  padding: 220px 10px 120px 10px;
   background-size: cover;
-  background-position: center;
+  min-height: 480px;      /* aumente a altura mínima */
+  height: 70vh;           /* aumente a altura relativa à tela */
+  max-height: 820px;      /* aumente a altura máxima */
+  border: 1.5px solid #3a1a4d;
+  box-shadow: 0 8px 32px #84007755;
   display: flex;
   flex-direction: column;
   align-items: center; 
   justify-content: center; 
-  text-align: center;       
+  text-align: center;
+  padding: 80px 0;        /* mais espaço interno */
+  margin-top: 0;          
+  position: relative;
+  overflow: hidden;
 }
 
-body.light-mode .footer,
-.footer {
-  background: linear-gradient(135deg, #840077 80%, #d587e7 100%);
+body.dark-mode .header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(30,0,40,0.60) 0%, rgba(0,0,0,0.75) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+body.dark-mode .header > * {
+  position: relative;
+  z-index: 2;
+}
+
+body.dark-mode .header a {
+  background: rgba(255,255,255,0.08);
+  color: #e8d6ff; /* texto mais claro para contraste */
+  text-shadow: 1px 1px #0008;
+}
+
+body.dark-mode .topnav {
+  background: linear-gradient(90deg, #2d0036 60%, #840077 100%);
+  box-shadow: 0 6px 28px #84007799, 0 1.5px 0 #fff2 inset;
+  border-radius: 28px;
+  border: 2px solid #3a1a4d;
+}
+
+body.dark-mode .topnav a {
+  background: rgba(255,255,255,0.08);
+  color: #e8d6ff; /* texto mais claro para contraste */
+  text-shadow: 1px 1px #0008;
+}
+
+body.dark-mode .topnav a:hover, 
+body.dark-mode .topnav a:focus {
+  background: #d587e7;
+  color: #2d0036;
+}
+
+body.dark-mode .buttonTheme, 
+body.dark-mode .languageButton {
+  background: linear-gradient(90deg, #840077 0%, #d587e7 100%);
   color: #fff;
+  box-shadow: 0 2px 12px #84007799;
 }
 
-/* =========================
-   DARK MODE
-========================= */
-body.dark-mode {
-  background: linear-gradient(135deg, #1a001f 0%, #430549 100%);
+body.dark-mode .buttonTheme:hover,
+body.dark-mode .languageButton:hover,
+body.dark-mode .buttonTheme:focus,
+body.dark-mode .languageButton:focus {
+  background: linear-gradient(90deg, #d587e7 0%, #840077 100%);
   color: #fff;
+  box-shadow: 0 4px 18px #d587e799;
 }
 
-body.dark-mode .header,
+/* Ajuste geral para textos */
+body.dark-mode,
+body.dark-mode p,
+body.dark-mode li,
+body.dark-mode label,
+body.dark-mode .divTextArticle,
+body.dark-mode .videosContainer,
+body.dark-mode .imgTextContainer,
 body.dark-mode .footer,
 body.dark-mode .footerBottom,
 body.dark-mode .SugestionsBox,
 body.dark-mode .sugestions,
-body.dark-mode .article,
-body.dark-mode .divTextArticle,
-body.dark-mode .divTextBottomAside,
-body.dark-mode .topaside,
-body.dark-mode .imgTextContainer,
-body.dark-mode .videosContainer {
-  background: rgba(72, 0, 87, 0.85) !important;
+body.dark-mode .carousel-caption a,
+body.dark-mode .footer ul li a,
+body.dark-mode .footerBottom a {
+  color: #e8d6ff !important; /* texto principal claro */
+}
+
+body.dark-mode .footer ul li a:hover,
+body.dark-mode .footerBottom a:hover {
+  color: #d587e7 !important;
+}
+
+body.dark-mode .estiloFonteArticle,
+body.dark-mode .estiloFonteArticleSub,
+body.dark-mode .estiloFonteSection {
+  color: #ffe0ff !important; /* títulos ainda mais claros */
+}
+
+body.dark-mode .noticiaLink {
+  color: #d587e7 !important;
+}
+body.dark-mode .noticiaLink:hover {
   color: #fff !important;
-  box-shadow: 0 2px 16px #00000044;
 }
 
-body.dark-mode .topnav {
-  background: #430549;
+body.dark-mode .estiloFonteArticleP {
+  color: #f3eaff !important;
+  text-shadow: 0 1px 2px #1a0823cc;
 }
-
-body.dark-mode .topnav a,
-body.dark-mode .footerBottom a,
-body.dark-mode .footer ul li a {
-  color: #fff !important;
-  background: rgba(255,255,255,0.08);
-}
-
-body.dark-mode .topnav a:hover,
-body.dark-mode .footerBottom a:hover,
-body.dark-mode .footer ul li a:hover {
-  background: #fff !important;
-  color: #840077 !important;
-}
-
-body.dark-mode .carousel-container,
-body.dark-mode .carousel-item,
-body.dark-mode .carousel-slide img {
-  background: #2d0036 !important;
-}
-
-body.dark-mode .carousel-caption a {
-  background: rgba(0,0,0,0.85);
-  color: #fff;
-}
-
-body.dark-mode .carousel-caption a:hover {
-  background: #d587e7;
-  color: #181818;
-}
-
-body.dark-mode .buttonTheme,
-body.dark-mode .languageButton {
-  background: linear-gradient(90deg, #430549 0%, #840077 100%);
-  color: #fff;
-}
-
-body.dark-mode .buttonTheme:hover,
-body.dark-mode .languageButton:hover {
-  background: linear-gradient(90deg, #840077 0%, #d587e7 100%);
-  color: #fff;
-}
-
-body.dark-mode input,
-body.dark-mode textarea {
-  background: #2d0036;
-  color: #fff;
-  border-color: #d587e7;
-}
-
-body.dark-mode input:focus,
-body.dark-mode textarea:focus {
-  border-color: #fff;
-}
-
-/* =========================
-   RESTANTE DO CSS (Responsivo, etc)
-========================= */
-/* ...demais regras responsivas e utilitárias já existentes... */
-
