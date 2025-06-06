@@ -1166,6 +1166,51 @@ body.dark-mode .articleNews .noticiaLink:hover {
   }
 }
 
+/* Dark mode para asideCarousel */
+body.dark-mode .asideCarousel {
+  background: linear-gradient(120deg, #2d0036 60%, #1a0823 100%);
+  box-shadow: 0 4px 24px #84007755;
+}
+body.dark-mode .asideCarousel h1 {
+  color: #ffe0ff;
+}
+body.dark-mode .asideCarousel p {
+  color: #e8d6ff;
+}
+body.dark-mode .asideCarousel .carousel-container {
+  background: #2d0036;
+  box-shadow: 0 2px 16px #84007755;
+}
+body.dark-mode .asideCarousel .carousel-item img {
+  border: 2px solid #2d0036;
+}
+body.dark-mode .asideCarousel .carousel-caption {
+  background: rgba(213,135,231,0.13);
+}
+body.dark-mode .asideCarousel .carousel-caption a {
+  color: #d587e7;
+  background: rgba(30,0,40,0.85);
+}
+body.dark-mode .asideCarousel .carousel-caption a:hover {
+  color: #fff;
+  background: #840077;
+}
+
+/* Responsivo para asideCarousel */
+@media (max-width: 700px) {
+  .asideCarousel {
+    padding: 14px 2vw 10px 2vw;
+  }
+  .asideCarousel .carousel-container {
+    border-radius: 10px;
+  }
+  .asideCarousel .carousel-item img {
+    border-radius: 10px;
+    height: 120px;
+    object-fit: cover;
+  }
+}
+
 /* =========================
    FIM DO ARQUIVO
 ========================= */
