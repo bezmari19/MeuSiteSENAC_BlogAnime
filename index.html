@@ -17,7 +17,7 @@
       <!-- NewsLetter Forms-->
       <div class="newsletter-modal" id="newsletterModal" overlay="true">
         <div class="newsletter-content">
-          <span class="close-newsletter" onclick="closeNewsletter()">×</span>
+          <span class="close-newsletter" onclick="closeNewsletter()"></span>
           <h1 class="newsletter-title">Inscreva-se na nossa Newsletter</h1>
           <p class="newsletter-description">Receba as últimas novidades e atualizações diretamente no seu e-mail!</p>
           <div class="newsletter-text">
@@ -290,11 +290,20 @@
               <div class="footer-div-2">
                 <div class="footer-div-column2">
                   <h1><span class="estiloFonteFooter" data-pt="Contato" data-en="Contact">Contato</span></h1>
-                    <ul>
-                      <li><a href="https://www.linkedin.com/in/marina-ferraz-dev/" data-pt="Linkedin" data-en="Linkedin">Linkedin</a></li>
-                      <li><a href="https://github.com/bezmari19" data-pt="GitHub" data-en="GitHub">GitHub</a></li>
-                      <li><a href="https://www.instagram.com/beznina_/" data-pt="Instagram" data-en="Instagram">Instagram</a></li>
-                    </ul>
+                  <p data-pt="Você pode entrar em contato conosco através das redes sociais ou e-mail abaixo:" data-en="You can contact us through the social networks or email below:">Você pode entrar em contato conosco através das redes sociais ou e-mail abaixo:</p>
+                  <div class="social-icons">
+                    <button class="social-icon"onclick="openSocialMedia('https://www.instagram.com/beznina_/')">
+                      <i class="bi bi-instagram"></i>
+                    </button>
+                    <button class="social-icon" onclick="openSocialMedia('mailto:marina.bezerraf19@gmail.com')">
+                      <i class="bi bi-envelope"></i>
+                    </button>
+                    <button class="social-icon" onclick="openSocialMedia('https://github.com/bezmari19')">
+                      <i class="bi bi-github"></i>
+                    </button>
+                    <button class="social-icon" onclick="openSocialMedia('https://www.linkedin.com/in/marina-ferraz-dev/')">
+                      <i class="bi bi-linkedin"></i>
+                    </button>
                   </div>
                 </div>
             </div>

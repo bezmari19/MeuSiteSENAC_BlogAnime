@@ -347,7 +347,11 @@ function createPetals() {
   }
 }
 
-
-
-
-
+// Função para abrir redes sociais ou e-mail do rodapé
+function openSocialMedia(url) {
+  if (url.startsWith('mailto:')) {
+    window.location.href = url; // Abre o cliente de e-mail no mesmo navegador
+  } else {
+    window.open(url, '_blank'); // Abre redes sociais em nova aba
+  }
+}
