@@ -3,9 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Mundo dos Animes</title>
-        <link rel="stylesheet" href="style2.css">
-    </head> 
+            <!-- Ícones do Bootstrap -->
+             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+             <title>Mundo dos Animes</title>
+             <link rel="stylesheet" href="style2.css">
+            </head> 
 
      <main>
     <body>
@@ -19,12 +21,13 @@
             </button>
             <!-- Botão para alternar idioma -->
             <button class="languageButton" onclick="languageButton()">
-              <i class="bi bi-globe2"></i>
+              <i class="bi bi-translate"></i>
               <span id="current-lang"></span>
             </button>
             <!-- Barra de busca -->
             <form class="searchForm" onsubmit="searchSite(event)">
-              <input type="text" class="searchInput" placeholder="Buscar..." aria-label="Buscar..." data-pt="Buscar..." data-en="Search..." required>
+              <input type="text" class="searchInput" placeholder="Buscar..." aria-label="Buscar..." required>
+              <input type="hidden" name="lang" value="pt-br">
               <button type="submit" class="searchButton">
                 <i class="bi bi-search-heart"></i>
               </button>
@@ -42,8 +45,8 @@
       <div>
         <header class="header">
           <a>
-            <h1><span class="estiloFonte" data-pt="Mundo dos Animes" data-en="World of Animes">Mundo dos Animes</span></h1>
-            <p data-pt="Seu portal de notícias, curiosidades e dicas do universo otaku!" data-en="Your portal for news, curiosities, and tips from the otaku universe!">Seu portal de notícias, curiosidades e dicas do universo otaku!</p>
+            <h1><span class="estiloFonte" data-pt="Mundo dos Animes" data-en="World of Animes">Animes</span></h1>
+            <p data-pt="Aqui você encontra notícias, curiosidades e dicas sobre seus animes favoritos!" data-en="Here you will find news, curiosities, and tips about your favorite animes!">Aqui você encontra notícias, curiosidades e dicas sobre seus animes favoritos!</p>
           </a>
         </header>
       </div>

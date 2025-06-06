@@ -24,12 +24,13 @@
             </button>
             <!-- Botão para alternar idioma -->
             <button class="languageButton" onclick="languageButton()">
-              <i class="bi bi-globe2"></i>
+              <i class="bi bi-translate"></i>
               <span id="current-lang"></span>
             </button>
             <!-- Barra de busca -->
             <form class="searchForm" onsubmit="searchSite(event)">
-              <input type="text" class="searchInput" placeholder="Buscar..." aria-label="Buscar..." data-pt="Buscar..." data-en="Search..." required>
+              <input type="text" class="searchInput" placeholder="Buscar..." aria-label="Buscar..." required>
+              <input type="hidden" name="lang" value="pt-br">
               <button type="submit" class="searchButton">
                 <i class="bi bi-search-heart"></i>
               </button>
