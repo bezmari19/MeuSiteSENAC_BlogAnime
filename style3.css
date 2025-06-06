@@ -984,70 +984,107 @@ body.dark-mode .articleNews .noticiaLink:hover {
   }
 }
 
-/* Design para o bloco de destaques (asideCarousel) */
+/* =========================
+   CARROSSEL DE DESTAQUES (ASIDE)
+========================= */
+
+/* Carrossel de destaques no aside */
 .asideCarousel {
   background: linear-gradient(120deg, #f3eaff 60%, #fff0fa 100%);
   border-radius: 18px;
   box-shadow: 0 4px 24px #84007722;
-  padding: 32px 24px 24px 24px;
-  margin: 36px auto 32px auto;
+  padding: 12px 12px 4px 12px;
+  margin: 36px auto 6px auto;
   max-width: 900px;
-  width: 98vw;
+  width: 100%;
   transition: background 0.3s, box-shadow 0.3s;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
 }
-
 .asideCarousel h1 {
   font-size: 1.7rem;
   color: #840077;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   letter-spacing: 1px;
 }
-
 .asideCarousel p {
   color: #430549;
   font-size: 1.08rem;
-  margin-bottom: 22px;
+  margin-bottom: 16px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
-
 .asideCarousel .carousel-container {
   margin: 0 auto;
   box-shadow: 0 2px 16px #84007722;
   border-radius: 16px;
   background: #fff;
+  width: 100%;
+  max-width: 600px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 180px;
 }
-
+.asideCarousel .carousel-slide {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(.77,0,.18,1);
+  width: 100%;
+}
+.asideCarousel .carousel-item {
+  flex: 0 0 33.3333%;
+  max-width: 33.3333%;
+  box-sizing: border-box;
+  padding: 0 4px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
 .asideCarousel .carousel-item img {
   border-radius: 16px;
   box-shadow: 0 2px 8px #84007722;
   border: 2px solid #fff0fa;
+  width: 100%;
+  max-width: 1200px;
+  height: 340px;
+  object-fit: cover;
+  display: block;
 }
-
 .asideCarousel .carousel-caption {
-  background: rgba(132,0,119,0.10);
+  background: rgba(213,135,231,0.10);
   border-radius: 0 0 16px 16px;
   margin-top: -28px;
   padding: 10px 0 6px 0;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 1;
 }
-
 .asideCarousel .carousel-caption a {
   color: #840077;
   font-weight: bold;
   text-decoration: none;
   font-size: 1.08rem;
-  transition: color 0.2s;
+  transition: color 0.2s, background 0.2s;
   background: rgba(255,255,255,0.85);
   padding: 6px 18px;
   border-radius: 12px;
   box-shadow: 0 1px 4px #84007711;
+  display: inline-block;
 }
-
 .asideCarousel .carousel-caption a:hover {
   color: #d587e7;
   background: #fff0fa;
   text-decoration: underline;
 }
-
 /* Botões do carrossel dentro do asideCarousel */
 .asideCarousel .carousel-btn {
   background: linear-gradient(135deg, #840077 60%, #d587e7 100%);
@@ -1065,10 +1102,15 @@ body.dark-mode .articleNews .noticiaLink:hover {
   align-items: center;
   justify-content: center;
   opacity: 0.92;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
+.asideCarousel .carousel-btn.prev { left: 12px; }
+.asideCarousel .carousel-btn.next { right: 12px; }
 .asideCarousel .carousel-btn:hover {
   background: linear-gradient(135deg, #d587e7 60%, #840077 100%);
-  transform: scale(1.12);
+  transform: translateY(-50%) scale(1.12);
   box-shadow: 0 4px 18px #84007777;
 }
 
