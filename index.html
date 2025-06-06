@@ -14,6 +14,28 @@
 
   <main>
     <body>
+      <!-- NewsLetter Forms-->
+      <div class="newsletter-modal" id="newsletterModal" overlay="true">
+        <div class="newsletter-content">
+          <span class="close-newsletter" onclick="closeNewsletter()">×</span>
+          <h1 class="newsletter-title">Inscreva-se na nossa Newsletter</h1>
+          <p class="newsletter-description">Receba as últimas novidades e atualizações diretamente no seu e-mail!</p>
+          <div class="newsletter-text">
+            <p>Inscreva-se para receber as últimas notícias, atualizações e ofertas especiais diretamente no seu e-mail!</p>
+          </div>
+          <div class="newsletter-form">
+            <p class="newsletter-form-text">Digite seu e-mail abaixo para se inscrever:</p>
+            <form onsubmit="subscribeNewsletter(event)">
+              <input type="email" placeholder="Digite seu e-mail" required>
+              <button type="submit">Inscrever-se</button>
+            </form>
+          </div>
+          <div id="newsletter-success" class="newsletter-success" style="display:none;">
+            Inscrição realizada com sucesso! Obrigado por se inscrever.
+          </div>
+        </div>
+      </div>
+
       <!-- Navegação principal do site -->
       <nav>
         <div class="topnav">

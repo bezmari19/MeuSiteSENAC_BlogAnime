@@ -1,8 +1,8 @@
-// Recupera preferências de idioma e tema do localStorage
+// Recupera as preferências de idioma e tema do localStorage
 let traducaoRecorrente = localStorage.getItem("traducao") || "pt";
 let temaRecorrente = localStorage.getItem("theme") || "light";
 
-// Objeto com traduções para os modos de tema
+// Tradução dos modos de tema
 const traducao = {
   pt: { "light-mode": "Claro", "dark-mode": "Escuro" },
   en: { "light-mode": "Light", "dark-mode": "Dark" }
@@ -205,6 +205,147 @@ window.addEventListener('DOMContentLoaded', () => {
   startCarouselAutoplay();
 });
 window.addEventListener('resize', () => showCarouselSlide(carouselIndex));
+
+// --- NEWSLETTER MODAL ---
+// Abre a modal da newsletter
+function openNewsletter() {
+  document.getElementById('newsletterModal').classList.add('active');
+  // Impede scroll do fundo
+  document.body.style.overflow = 'hidden';
+  createPetals();
+}
+
+// Fecha a modal da newsletter
+function closeNewsletter() {
+  document.getElementById('newsletterModal').classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+// Função para definir cookie
+function setNewsletterCookie(name, value, days) {
+  const expires = new Date(Date.now() + days*24*60*60*1000).toUTCString();
+  document.cookie = `${name}=${encodeURIComponent(value)}; expires=${expires}; path=/`;
+}
+
+// Função para ler cookie
+function getNewsletterCookie(name) {
+  const value = `; ${document.cookie}`;
+  const parts = value.split(`; ${name}=`);
+  if (parts.length === 2) return decodeURIComponent(parts.pop().split(';').shift());
+  return null;
+}
+
+// Envia o formulário da newsletter
+function subscribeNewsletter(event) {
+  event.preventDefault();
+  const input = document.querySelector('.newsletter-form input[type="email"]');
+  const email = input.value.trim();
+  const successMsg = document.getElementById('newsletter-success');
+
+  // Verifica se já está inscrito
+  const emailLS = localStorage.getItem('newsletter_email');
+  const emailCookie = getNewsletterCookie('newsletter_email');
+  if (emailLS || emailCookie) {
+    if (successMsg) {
+      successMsg.textContent = 'Você já está inscrito na newsletter!';
+      successMsg.style.display = 'block';
+      setTimeout(() => {
+        successMsg.style.display = 'none';
+        closeNewsletter();
+      }, 2000);
+    } else {
+      alert('Você já está inscrito na newsletter!');
+      closeNewsletter();
+    }
+    return;
+  }
+
+  if (!email || !validateEmail(email)) {
+    if (successMsg) {
+      successMsg.textContent = 'Por favor, digite um e-mail válido.';
+      successMsg.style.display = 'block';
+      setTimeout(() => { successMsg.style.display = 'none'; }, 2000);
+    } else {
+      alert('Por favor, digite um e-mail válido.');
+    }
+    return;
+  }
+
+  // Salva no localStorage e cookie
+  localStorage.setItem('newsletter_email', email);
+  setNewsletterCookie('newsletter_email', email, 365);
+
+  // Mostra aviso visual de sucesso
+  if (successMsg) {
+    successMsg.textContent = 'Inscrição realizada com sucesso! Obrigado por se inscrever.';
+    successMsg.style.display = 'block';
+    setTimeout(() => {
+      successMsg.style.display = 'none';
+      closeNewsletter();
+    }, 2500);
+  } else {
+    alert('Inscrição realizada com sucesso!\nObrigado por se inscrever.');
+    closeNewsletter();
+  }
+
+  // Limpa campo
+  input.value = '';
+}
+
+// Função simples para validar e-mail
+function validateEmail(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+// Abre a newsletter assim que o usuário entra no site (sempre)
+window.addEventListener('DOMContentLoaded', () => {
+  openNewsletter();
+  // Verifica se já está inscrito no localStorage ou cookie
+  const emailLS = localStorage.getItem('newsletter_email');
+  const emailCookie = getNewsletterCookie('newsletter_email');
+  if (!emailLS && !emailCookie) {
+    openNewsletter();
+  }
+});
+
+// Fecha a modal ao clicar fora do conteúdo
+document.addEventListener('click', function(e) {
+  const modal = document.getElementById('newsletterModal');
+  if (
+    modal &&
+    modal.classList.contains('active') &&
+    !e.target.closest('.newsletter-content') &&
+    !e.target.closest('.newsletter-form') &&
+    !e.target.closest('.newsletter-text') &&
+    !e.target.classList.contains('close-newsletter')
+  ) {
+    closeNewsletter();
+  }
+});
+
+// Fecha a modal com ESC
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeNewsletter();
+});
+
+// Pétalas rosas caindo na newsletter
+function createPetals() {
+  const modal = document.getElementById('newsletterModal');
+  if (!modal) return;
+  // Remove pétalas antigas
+  modal.querySelectorAll('.petal').forEach(p => p.remove());
+  // Cria novas pétalas
+  for (let i = 0; i < 18; i++) {
+    const petal = document.createElement('div');
+    petal.className = 'petal';
+    // Distribui horizontalmente e randomiza delay e duração
+    petal.style.left = Math.random() * 98 + 'vw';
+    petal.style.animationDelay = (Math.random() * 4) + 's';
+    petal.style.animationDuration = (5 + Math.random() * 3) + 's';
+    petal.style.opacity = 0.7 + Math.random() * 0.3;
+    modal.appendChild(petal);
+  }
+}
 
 
 
