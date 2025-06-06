@@ -1,16 +1,23 @@
 @charset "UTF-8";
 
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+/* Reset básico e box-sizing para todos os elementos */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* Define altura mínima e largura total para html e body */
 html, body {
   width: 100%;
   min-height: 100vh;
 }
 
+/* Estilo base do body */
 body {
   background: linear-gradient(135deg, #f0e6ff 0%, #f9f6ff 100%);
   color: #2d0036;
@@ -25,13 +32,14 @@ body {
 /* =========================
    HEADER
 ========================= */
+/* Header com imagem de fundo animada e efeito de overlay */
 .header {
   background: url("https://images.squarespace-cdn.com/content/v1/5ccb050e809d8e130ff3433f/1569528582331-8KUZ08PVWGZTL4XFFMAC/sailor-moon.gif?format=2500w") no-repeat center center;
   background-attachment: fixed;
   background-size: cover;
-  min-height: 480px;      /* aumente a altura mínima */
-  height: 70vh;           /* aumente a altura relativa à tela */
-  max-height: 820px;      /* aumente a altura máxima */
+  min-height: 480px;
+  height: 70vh;
+  max-height: 820px;
   border: 1.5px solid #fff2;
   box-shadow: 0 8px 32px #84007733;
   display: flex;
@@ -39,12 +47,13 @@ body {
   align-items: center; 
   justify-content: center; 
   text-align: center;
-  padding: 80px 0;        /* mais espaço interno */
+  padding: 80px 0;
   margin-top: 0;          
   position: relative;
   overflow: hidden;
 }
 
+/* Overlay escuro para melhor contraste do texto */
 .header::before {
   content: "";
   position: absolute;
@@ -54,11 +63,13 @@ body {
   pointer-events: none;
 }
 
+/* Garante que o conteúdo do header fique acima do overlay */
 .header > * {
   position: relative;
   z-index: 2;
 }
 
+/* Estilo dos links no header */
 .header a {
   background: rgba(255,255,255,0.13);
   border: 2.5px solid #fff;
@@ -73,6 +84,7 @@ body {
   letter-spacing: 1.5px;
 }
 
+/* Garante que header, footer e main sejam exibidos como blocos */
 header, footer, main {
   display: block;
 }
@@ -80,11 +92,12 @@ header, footer, main {
 /* =========================
    NAVEGAÇÃO
 ========================= */
+/* Barra de navegação principal */
 .topnav {
   background: linear-gradient(90deg, rgba(132,0,119,0.96) 60%, rgba(213,135,231,0.92) 100%);
   box-shadow: 0 6px 28px #84007755, 0 1.5px 0 #fff2 inset;
   border-radius: 28px;
-  margin: 0 auto 8px auto;      /* Menos espaço abaixo, gruda na header */
+  margin: 0 auto 8px auto;
   max-width: 98vw;
   width: 98vw;
   padding: 14px 40px;
@@ -100,20 +113,16 @@ header, footer, main {
   z-index: 10;
 }
 
-.topnav-left {
+/* Alinhamento dos itens à esquerda e à direita da navegação */
+.topnav-left, .controlsNav {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-left: 10px;
 }
+.topnav-left { margin-left: 10px; }
+.controlsNav { margin-right: 10px; }
 
-.controlsNav {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-right: 10px;
-}
-
+/* Links da navegação */
 .topnav a {
   font-size: 1.15rem;
   padding: 13px 32px;
@@ -134,6 +143,7 @@ header, footer, main {
   letter-spacing: 1px;
 }
 
+/* Efeito de sublinhado animado nos links */
 .topnav a::after {
   content: "";
   position: absolute;
@@ -145,6 +155,7 @@ header, footer, main {
   transition: width 0.3s, left 0.3s;
 }
 
+/* Hover dos links da navegação */
 .topnav a:hover, .topnav a:focus {
   background: #fff;
   color: #840077;
@@ -152,12 +163,12 @@ header, footer, main {
   box-shadow: 0 4px 18px #84007755;
   text-decoration: none;
 }
-
 .topnav a:hover::after, .topnav a:focus::after {
   width: 80%;
   left: 10%;
 }
 
+/* Botões de tema e idioma */
 .buttonTheme, .languageButton {
   background: linear-gradient(90deg, #d587e7 0%, #840077 100%);
   border: none;
@@ -173,7 +184,6 @@ header, footer, main {
   cursor: pointer;
   letter-spacing: 1px;
 }
-
 .buttonTheme:hover,
 .languageButton:hover,
 .buttonTheme:focus,
@@ -185,12 +195,12 @@ header, footer, main {
   outline: none;
 }
 
+/* Formulário de busca */
 .searchForm {
   display: flex;
   align-items: center;
   margin-left: 10px;
 }
-
 .searchInput {
   padding: 5px 10px;
   border: 1px solid #840077;
@@ -198,7 +208,6 @@ header, footer, main {
   outline: none;
   font-size: 15px;
 }
-
 .searchButton {
   padding: 5px 10px;
   border: 1px solid #840077;
@@ -211,34 +220,29 @@ header, footer, main {
   display: flex;
   align-items: center;
 }
-
-.searchButton i {
-  font-size: 18px;
-}
+.searchButton i { font-size: 18px; }
 
 /* =========================
    ASIDE E ARTIGO
 ========================= */
+/* Estilos para aside e artigos */
 .topaside {
   background-color: #cd0f9198;
   padding: 20px;
   color: #fff;
   text-align: center;
 }
-
 .divTextBottomAside {
   background-color: #840077;
   color: #fff;
   padding: 20px;
   text-align: left;
 }
-
 .article {
   background-color: #99095867;
   padding: 20px;
   text-align: left;
 }
-
 .divTextArticle {
   background-color: #84007760;
   padding: 20px;
@@ -246,20 +250,19 @@ header, footer, main {
   padding: 10px 8px;
 }
 
+/* Containers de vídeo e imagem/texto */
 .videosContainer, .imgTextContainer {
   display: flex;
   align-items: center;
   gap: 20px;
   margin-bottom: 20px;
 }
-
 .videosContainer iframe, .imgTextContainer img {
   max-width: 100%;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 8px #00000033;
 }
-
 .videosContainer p, .imgTextContainer p {
   flex: 1;
   font-size: 16px;
@@ -271,6 +274,7 @@ header, footer, main {
 /* =========================
    CARROSSEL
 ========================= */
+/* Carrossel de imagens */
 .carousel-container {
   position: relative;
   width: 600px;
@@ -281,20 +285,17 @@ header, footer, main {
   box-shadow: 0 6px 32px #84007755;
   background: #fff;
 }
-
 .carousel-slide {
   display: flex;
   transition: transform 0.5s cubic-bezier(.77,0,.18,1);
   width: 100%;
 }
-
 .carousel-item {
   position: relative;
   display: flex;
   align-items: flex-end;
   justify-content: center;
 }
-
 .carousel-slide img {
   width: 600px;
   max-width: 98vw;
@@ -304,7 +305,6 @@ header, footer, main {
   flex-shrink: 0;
   transition: filter 0.2s;
 }
-
 .carousel-caption {
   position: absolute;
   bottom: 18px;
@@ -312,7 +312,6 @@ header, footer, main {
   width: 100%;
   text-align: center;
 }
-
 .carousel-caption a {
   background: rgba(0,0,0,0.68);
   color: #fff;
@@ -324,12 +323,11 @@ header, footer, main {
   transition: background 0.2s, color 0.2s;
   box-shadow: 0 2px 8px #00000055;
 }
-
 .carousel-caption a:hover {
   background: #d587e7;
   color: #181818;
 }
-
+/* Botões do carrossel */
 .carousel-btn {
   position: absolute;
   top: 50%;
@@ -350,10 +348,8 @@ header, footer, main {
   justify-content: center;
   opacity: 0.92;
 }
-
 .carousel-btn.prev { left: 18px; }
 .carousel-btn.next { right: 18px; }
-
 .carousel-btn:hover {
   background: linear-gradient(135deg, #d587e7 60%, #840077 100%);
   transform: translateY(-50%) scale(1.12);
@@ -363,6 +359,7 @@ header, footer, main {
 /* =========================
    FOOTER
 ========================= */
+/* Rodapé principal */
 footer {
   background: linear-gradient(135deg, #840077 80%, #d587e7 100%);
   color: #fff;
@@ -370,7 +367,6 @@ footer {
   margin-top: 40px;
   font-family: system-ui, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-
 .footer {
   display: flex;
   flex-wrap: wrap;
@@ -378,20 +374,18 @@ footer {
   gap: 32px;
   padding: 0 5vw;
 }
-
 #columnFooter {
   flex: 1 1 220px;
   min-width: 220px;
   margin-bottom: 24px;
 }
-
 .footer-div-1, .footer-div-2, .footer-div-3, .footer-div-4 {
   background: rgba(255,255,255,0.07);
   border-radius: 12px;
   padding: 18px 16px;
   box-shadow: 0 2px 8px #00000022;
 }
-
+/* Títulos das colunas do footer */
 .footer-div-column1 h1,
 .footer-div-column2 h1,
 .footer-div-column3 h1,
@@ -401,24 +395,21 @@ footer {
   margin-bottom: 10px;
   text-shadow: 1px 1px #430549;
 }
-
+/* Listas do footer */
 .footer ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-
 .footer ul li {
   margin-bottom: 8px;
 }
-
 .footer ul li a {
   color: #fff;
   text-decoration: none;
   transition: color 0.2s;
   font-weight: 500;
 }
-
 .footer ul li a:hover {
   color: #d587e7;
   text-decoration: underline;
@@ -427,89 +418,43 @@ footer {
 /* =========================
    SUGESTÕES
 ========================= */
-.sugestions {
+/* Formulário de sugestões */
+.sugestions, .SugestionsBox {
   flex: 1 1 320px;
   min-width: 240px;
-  margin-bottom: 0;
   background: rgba(255,255,255,0.10);
   border-radius: 12px;
+  box-shadow: 0 2px 8px #00000022;
+  margin-bottom: 24px;
   padding: 18px 16px 10px 16px;
-  margin-bottom: 24px;
-  box-shadow: 0 2px 8px #00000022;
 }
-
-.sugestions h1 {
-  font-size: 1.2rem;
-  color: #fff;
-  margin-bottom: 10px;
-  text-shadow: 1px 1px #430549;
-}
-
-.sugestions label {
-  display: block;
-  margin-top: 12px;
-  margin-bottom: 4px;
+.sugestions h1, .SugestionsBox label {
   color: #fff;
   font-weight: 500;
 }
-
-.sugestions input[type="email"] {
+.sugestions input[type="email"], .SugestionsBox textarea {
   width: 100%;
   padding: 8px 12px;
   border-radius: 6px;
   border: 1.5px solid #d587e7;
-  margin-bottom: 10px;
   font-size: 1rem;
   outline: none;
   background: #fff;
   color: #840077;
   transition: border 0.2s;
 }
-
-.sugestions input[type="email"]:focus {
+.sugestions input[type="email"]:focus, .SugestionsBox textarea:focus {
   border: 2px solid #840077;
 }
-
-.SugestionsBox {
-  flex: 1 1 320px;
-  min-width: 240px;
-  margin-bottom: 0;
-  background: rgba(255,255,255,0.10);
-  border-radius: 12px;
-  padding: 18px 16px 24px 16px;
-  margin-bottom: 24px;
-  box-shadow: 0 2px 8px #00000022;
-  display: flex;
-  flex-direction: column;
-}
-
-.SugestionsBox label {
-  margin-bottom: 4px;
-  color: #fff;
-  font-weight: 500;
-}
-
 .SugestionsBox textarea {
-  width: 100%;
   min-height: 80px;
-  padding: 8px 12px;
-  border-radius: 6px;
-  border: 1.5px solid #d587e7;
-  font-size: 1rem;
-  outline: none;
-  background: #fff;
-  color: #840077;
   resize: vertical;
-  transition: border 0.2s;
-}
-
-.SugestionsBox textarea:focus {
-  border: 2px solid #840077;
 }
 
 /* =========================
    FOOTER BOTTOM
 ========================= */
+/* Rodapé inferior */
 .footerBottom {
   background: #181818;
   color: #fff;
@@ -532,7 +477,6 @@ footer {
   transform: translateX(-50%);
   box-sizing: border-box;
 }
-
 .footerBottom nav {
   display: flex;
   flex-wrap: wrap;
@@ -540,7 +484,6 @@ footer {
   gap: 26px;
   margin-bottom: 12px;
 }
-
 .footerBottom a {
   color: #fff;
   text-decoration: none;
@@ -553,7 +496,6 @@ footer {
   box-shadow: 0 2px 10px #00000033;
   letter-spacing: 1px;
 }
-
 .footerBottom a:hover {
   background: #fff;
   color: #181818;
@@ -574,7 +516,6 @@ footer {
   color: #d587e7;
   text-decoration: underline;
 }
-
 .estiloFonteArticleSub {
   font-size: 1.3rem;
   color: #840077;
@@ -582,13 +523,16 @@ footer {
   letter-spacing: 1px;
 }
 
+/* =========================
+   SECTIONS DE VÍDEOS E IMAGEM/TEXTO
+========================= */
+/* Containers de vídeo e imagem/texto para artigos */
 .section.column.bottom {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 18px 0 28px 0;
 }
-
 .topSection.imgTextContainer {
   display: flex;
   flex-direction: row;
@@ -601,7 +545,6 @@ footer {
   max-width: 900px;
   width: 100%;
 }
-
 .topSection.imgTextContainer img {
   width: 320px;
   max-width: 90vw;
@@ -610,20 +553,17 @@ footer {
   border-radius: 12px;
   box-shadow: 0 2px 8px #84007733;
 }
-
 .imgTextContainer {
   padding: 10px 14px;
   gap: 14px;
   max-width: 700px;
 }
-
 .imgTextContainer img {
   width: 180px;
   height: 110px;
   object-fit: cover;
   border-radius: 10px;
 }
-
 .divTextArticle {
   flex: 1;
   background: rgba(132,0,119,0.06);
@@ -634,21 +574,18 @@ footer {
   font-weight: 500;
   box-shadow: 0 1px 4px #84007711;
 }
-
 .estiloFonteArticle {
   font-size: 1.5rem;
   color: #840077;
   font-weight: bold;
   letter-spacing: 1px;
 }
-
 .estiloFonteArticleSub {
   font-size: 1.15rem;
   color: #d587e7;
   font-weight: bold;
   letter-spacing: 0.5px;
 }
-
 .estiloFonteArticleP {
   color: #430549;
   font-size: 0.98rem;
@@ -656,186 +593,9 @@ footer {
 }
 
 /* =========================
-   CARROSSEL NO ASIDE
-========================= */
-.carousel-container {
-  position: relative;
-  width: 600px;
-  max-width: 98vw;
-  margin: 36px auto 24px auto;
-  overflow: hidden;
-  border-radius: 22px;
-  box-shadow: 0 6px 32px #84007755;
-  background: #fff;
-}
-
-.carousel-slide {
-  display: flex;
-  transition: transform 0.5s cubic-bezier(.77,0,.18,1);
-  width: 100%;
-}
-
-.carousel-item {
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-}
-
-.carousel-slide img {
-  width: 600px;
-  max-width: 98vw;
-  height: 340px;
-  object-fit: cover;
-  border-radius: 22px;
-  flex-shrink: 0;
-  transition: filter 0.2s;
-}
-
-.carousel-caption {
-  position: absolute;
-  bottom: 18px;
-  left: 0;
-  width: 100%;
-  text-align: center;
-}
-
-.carousel-caption a {
-  background: rgba(0,0,0,0.68);
-  color: #fff;
-  padding: 10px 22px;
-  border-radius: 16px;
-  font-size: 1.1rem;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.2s, color 0.2s;
-  box-shadow: 0 2px 8px #00000055;
-}
-
-.carousel-caption a:hover {
-  background: #d587e7;
-  color: #181818;
-}
-
-.carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: linear-gradient(135deg, #840077 60%, #d587e7 100%);
-  color: #fff;
-  border: none;
-  border-radius: 50%;
-  width: 48px;
-  height: 48px;
-  font-size: 2rem;
-  cursor: pointer;
-  z-index: 2;
-  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
-  box-shadow: 0 2px 12px #84007733;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0.92;
-}
-
-.carousel-btn.prev { left: 18px; }
-.carousel-btn.next { right: 18px; }
-
-.carousel-btn:hover {
-  background: linear-gradient(135deg, #d587e7 60%, #840077 100%);
-  transform: translateY(-50%) scale(1.12);
-  box-shadow: 0 4px 18px #84007777;
-}
-
-/* =========================
-   SECTIONS DE VÍDEOS RELEVANTES
-========================= */
-.videosContainer {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 16px;
-  background: rgba(132,0,119,0.07);
-  border-radius: 12px;
-  box-shadow: 0 2px 12px #84007722;
-  padding: 10px 14px;
-  max-width: 700px;
-  width: 100%;
-  margin: 18px auto;
-}
-
-.videosContainer iframe {
-  width: 320px;
-  height: 180px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px #84007733;
-  border: none;
-}
-
-.videosContainer .divTextArticle {
-  flex: 1;
-  background: rgba(132,0,119,0.06);
-  border-radius: 8px;
-  padding: 8px 12px;
-  color: #2d0036;
-  font-size: 0.98rem;
-  font-weight: 500;
-  box-shadow: 0 1px 4px #84007711;
-  display: flex;
-  align-items: center;
-}
-
-/* =========================
-   SECTIONS DE IMAGEM E TEXTO
-========================= */
-.imgTextContainer {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 14px;
-  background: rgba(132,0,119,0.07);
-  border-radius: 12px;
-  box-shadow: 0 2px 12px #84007722;
-  padding: 10px 14px;
-  max-width: 700px;
-  width: 100%;
-  margin: 18px auto;
-}
-
-.imgHomeTop img,
-.imgHomeMiddle img,
-.imgHomeBottom img {
-  width: 140px;
-  height: 90px;
-  object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px #84007733;
-  display: block;
-}
-
-.divTextArticle {
-  flex: 1;
-  background: rgba(132,0,119,0.06);
-  border-radius: 8px;
-  padding: 8px 12px;
-  color: #2d0036;
-  font-size: 0.98rem;
-  font-weight: 500;
-  box-shadow: 0 1px 4px #84007711;
-  display: flex;
-  align-items: center;
-}
-
-.estiloFonteSection {
-  font-size: 1.1rem;
-  color: #840077;
-  font-weight: bold;
-  letter-spacing: 0.5px;
-}
-
-/* =========================
    RESPONSIVO
 ========================= */
+/* Responsividade para diferentes tamanhos de tela */
 @media (max-width: 900px) {
   .topSection.imgTextContainer {
     flex-direction: column;
@@ -904,11 +664,7 @@ footer {
   .topnav a { font-size: 0.95rem; padding: 6px 2px; }
 }
 
-/* =========================
-   MELHORIAS DE RESPONSIVIDADE
-========================= */
-
-/* Para monitores grandes */
+/* Responsividade para monitores grandes */
 @media (min-width: 1400px) {
   .header {
     padding: 260px 0 160px 0;
@@ -919,8 +675,7 @@ footer {
     height: 480px;
   }
 }
-
-/* Para notebooks e desktops médios */
+/* Notebooks e desktops médios */
 @media (min-width: 1025px) and (max-width: 1399px) {
   .header {
     padding: 180px 0 100px 0;
@@ -931,8 +686,7 @@ footer {
     height: 380px;
   }
 }
-
-/* Tablets (paisagem e retrato) */
+/* Tablets */
 @media (max-width: 1024px) {
   .header {
     padding: 80px 2vw 40px 2vw;
@@ -949,7 +703,6 @@ footer {
     padding: 0 2vw;
   }
 }
-
 /* Smartphones */
 @media (max-width: 600px) {
   .header {
@@ -980,7 +733,6 @@ footer {
     height: 120px;
   }
 }
-
 /* Pequenos smartphones */
 @media (max-width: 400px) {
   .header {
@@ -996,8 +748,7 @@ footer {
 /* =========================
    DARK MODE
 ========================= */
-/* Dark Mode CSS for Sailor Moon Fan Page */
-
+/* Modo escuro para todo o site */
 body.dark-mode {
   background: linear-gradient(135deg, #1a0823 0%, #2d0036 100%);
   color: #f3eaff;
@@ -1008,14 +759,14 @@ body.dark-mode {
   box-shadow: 0 0 0 100vmax #1a0823 inset;
   overflow-x: hidden;
 }
-
+/* Header no modo escuro */
 body.dark-mode .header {
   background: url("https://images.squarespace-cdn.com/content/v1/5ccb050e809d8e130ff3433f/1569528582331-8KUZ08PVWGZTL4XFFMAC/sailor-moon.gif?format=2500w") no-repeat center center;
   background-attachment: fixed;
   background-size: cover;
-  min-height: 480px;      /* aumente a altura mínima */
-  height: 70vh;           /* aumente a altura relativa à tela */
-  max-height: 820px;      /* aumente a altura máxima */
+  min-height: 480px;
+  height: 70vh;
+  max-height: 820px;
   border: 1.5px solid #3a1a4d;
   box-shadow: 0 8px 32px #84007755;
   display: flex;
@@ -1023,12 +774,12 @@ body.dark-mode .header {
   align-items: center; 
   justify-content: center; 
   text-align: center;
-  padding: 80px 0;        /* mais espaço interno */
+  padding: 80px 0;
   margin-top: 0;          
   position: relative;
   overflow: hidden;
 }
-
+/* Overlay escuro no header */
 body.dark-mode .header::before {
   content: "";
   position: absolute;
@@ -1037,44 +788,36 @@ body.dark-mode .header::before {
   z-index: 1;
   pointer-events: none;
 }
-
-body.dark-mode .header > * {
-  position: relative;
-  z-index: 2;
-}
-
+body.dark-mode .header > * { position: relative; z-index: 2; }
 body.dark-mode .header a {
   background: rgba(255,255,255,0.08);
-  color: #e8d6ff; /* texto mais claro para contraste */
+  color: #e8d6ff;
   text-shadow: 1px 1px #0008;
 }
-
+/* Navegação no modo escuro */
 body.dark-mode .topnav {
   background: linear-gradient(90deg, #2d0036 60%, #840077 100%);
   box-shadow: 0 6px 28px #84007799, 0 1.5px 0 #fff2 inset;
   border-radius: 28px;
   border: 2px solid #3a1a4d;
 }
-
 body.dark-mode .topnav a {
   background: rgba(255,255,255,0.08);
-  color: #e8d6ff; /* texto mais claro para contraste */
+  color: #e8d6ff;
   text-shadow: 1px 1px #0008;
 }
-
 body.dark-mode .topnav a:hover, 
 body.dark-mode .topnav a:focus {
   background: #d587e7;
   color: #2d0036;
 }
-
+/* Botões no modo escuro */
 body.dark-mode .buttonTheme, 
 body.dark-mode .languageButton {
   background: linear-gradient(90deg, #840077 0%, #d587e7 100%);
   color: #fff;
   box-shadow: 0 2px 12px #84007799;
 }
-
 body.dark-mode .buttonTheme:hover,
 body.dark-mode .languageButton:hover,
 body.dark-mode .buttonTheme:focus,
@@ -1083,8 +826,7 @@ body.dark-mode .languageButton:focus {
   color: #fff;
   box-shadow: 0 4px 18px #d587e799;
 }
-
-/* Ajuste geral para textos */
+/* Ajuste geral para textos no modo escuro */
 body.dark-mode,
 body.dark-mode p,
 body.dark-mode li,
@@ -1099,27 +841,23 @@ body.dark-mode .sugestions,
 body.dark-mode .carousel-caption a,
 body.dark-mode .footer ul li a,
 body.dark-mode .footerBottom a {
-  color: #e8d6ff !important; /* texto principal claro */
+  color: #e8d6ff !important;
 }
-
 body.dark-mode .footer ul li a:hover,
 body.dark-mode .footerBottom a:hover {
   color: #d587e7 !important;
 }
-
 body.dark-mode .estiloFonteArticle,
 body.dark-mode .estiloFonteArticleSub,
 body.dark-mode .estiloFonteSection {
-  color: #ffe0ff !important; /* títulos ainda mais claros */
+  color: #ffe0ff !important;
 }
-
 body.dark-mode .noticiaLink {
   color: #d587e7 !important;
 }
 body.dark-mode .noticiaLink:hover {
   color: #fff !important;
 }
-
 body.dark-mode .estiloFonteArticleP {
   color: #f3eaff !important;
   text-shadow: 0 1px 2px #1a0823cc;
