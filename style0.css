@@ -277,13 +277,17 @@ header, footer, main {
 /* Carrossel de imagens */
 .carousel-container {
   position: relative;
-  width: 600px;
+  width: 1200px;         /* aumente a largura */
   max-width: 98vw;
-  margin: 36px auto 24px auto;
+  margin: 36px auto 24px;
   overflow: hidden;
   border-radius: 22px;
   box-shadow: 0 6px 32px #84007755;
   background: #fff;
+  /* Adicione uma borda sutil para destacar no fundo claro */
+  border: 1px solid #f3eaff;
+  height: 480px;          /* aumente a altura */
+  min-height: 380px;
 }
 .carousel-slide {
   display: flex;
@@ -297,9 +301,9 @@ header, footer, main {
   justify-content: center;
 }
 .carousel-slide img {
-  width: 600px;
+  width: 1200px;         /* aumente a largura */
   max-width: 98vw;
-  height: 340px;
+  height: 480px;
   object-fit: cover;
   border-radius: 22px;
   flex-shrink: 0;
@@ -311,49 +315,66 @@ header, footer, main {
   left: 0;
   width: 100%;
   text-align: center;
+  background: rgba(213,135,231,0.10); /* tom suave lilás */
+  color: #840077;
 }
 .carousel-caption a {
-  background: rgba(0,0,0,0.68);
-  color: #fff;
-  padding: 10px 22px;
-  border-radius: 16px;
-  font-size: 1.1rem;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.2s, color 0.2s;
-  box-shadow: 0 2px 8px #00000055;
+  background: #fff0fa;
+  color: #840077;
+  border: 1px solid #d587e7;
 }
 .carousel-caption a:hover {
-  background: #d587e7;
-  color: #181818;
+  background: #f3eaff;
+  color: #d587e7;
 }
 /* Botões do carrossel */
 .carousel-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: linear-gradient(135deg, #840077 60%, #d587e7 100%);
-  color: #fff;
-  border: none;
+  background: linear-gradient(135deg, #fff0fa 60%, #d587e7 100%);
+  color: #840077;
+  border: 2px solid #d587e7;
   border-radius: 50%;
-  width: 48px;
-  height: 48px;
-  font-size: 2rem;
+  width: 44px;
+  height: 44px;
+  font-size: 1.7rem;
   cursor: pointer;
   z-index: 2;
-  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
-  box-shadow: 0 2px 12px #84007733;
+  transition: background 0.2s, color 0.2s, border 0.2s, transform 0.15s, box-shadow 0.2s;
+  box-shadow: 0 2px 12px #d587e733;
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0.92;
+  opacity: 0.96;
+  outline: none;
 }
 .carousel-btn.prev { left: 18px; }
 .carousel-btn.next { right: 18px; }
-.carousel-btn:hover {
-  background: linear-gradient(135deg, #d587e7 60%, #840077 100%);
+.carousel-btn:hover, .carousel-btn:focus {
+  background: linear-gradient(135deg, #d587e7 60%, #fff0fa 100%);
+  color: #fff;
+  border: 2px solid #840077;
   transform: translateY(-50%) scale(1.12);
-  box-shadow: 0 4px 18px #84007777;
+  box-shadow: 0 4px 18px #84007755;
+}
+
+/* Indicadores do carrossel */
+.carousel-indicators {
+  text-align: center;
+  margin-top: 10px;
+}
+.carousel-dot {
+  display: inline-block;
+  width: 12px; height: 12px;
+  margin: 0 4px;
+  background: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.carousel-dot.active, .carousel-dot:hover {
+  background: #333;
 }
 
 /* =========================
@@ -630,6 +651,11 @@ footer {
 @media (max-width: 1024px) {
   .header { padding: 60px 4vw 40px 4vw; }
   .footer, .topnav { flex-direction: column; align-items: stretch; padding: 0 2vw; }
+  .carousel-container, .carousel-slide img {
+    width: 98vw;
+    height: 280px;
+    border-radius: 14px;
+  }
 }
 @media (max-width: 900px) {
   .footer, .topnav, .videosContainer, .imgTextContainer { flex-direction: column; gap: 12px; padding: 0 2vw; }
@@ -989,25 +1015,32 @@ body.dark-mode .articleNews .noticiaLink:hover {
   background: linear-gradient(120deg, #f3eaff 60%, #fff0fa 100%);
   border-radius: 18px;
   box-shadow: 0 4px 24px #84007722;
-  padding: 32px 24px 24px 24px;
-  margin: 36px auto 32px auto;
+  padding: 12px 12px 4px 12px; /* padding menor na altura (topo e base) */
+  margin: 36px auto 6px auto;
   max-width: 900px;
-  width: 98vw;
+  width: 100%;
   transition: background 0.3s, box-shadow 0.3s;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
 }
 
 .asideCarousel h1 {
   font-size: 1.7rem;
   color: #840077;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   letter-spacing: 1px;
 }
 
 .asideCarousel p {
   color: #430549;
   font-size: 1.08rem;
-  margin-bottom: 22px;
+  margin-bottom: 16px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .asideCarousel .carousel-container {
@@ -1015,19 +1048,54 @@ body.dark-mode .articleNews .noticiaLink:hover {
   box-shadow: 0 2px 16px #84007722;
   border-radius: 16px;
   background: #fff;
+  width: 100%;
+  max-width: 600px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 180px;
+}
+
+.asideCarousel .carousel-slide {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(.77,0,.18,1);
+  width: 100%;
+}
+
+.asideCarousel .carousel-item {
+  flex: 0 0 33.3333%; /* 3 itens por vez */
+  max-width: 33.3333%;
+  box-sizing: border-box;
+  padding: 0 4px; /* Espaço opcional entre itens */
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
 
 .asideCarousel .carousel-item img {
   border-radius: 16px;
   box-shadow: 0 2px 8px #84007722;
   border: 2px solid #fff0fa;
+  width: 100%;
+  max-width: 1200px;    /* aumente a largura máxima */
+  height: 340px;        /* ajuste a altura se quiser */
+  object-fit: cover;
+  display: block;
 }
 
 .asideCarousel .carousel-caption {
-  background: rgba(132,0,119,0.10);
+  background: rgba(213,135,231,0.10);
   border-radius: 0 0 16px 16px;
   margin-top: -28px;
   padding: 10px 0 6px 0;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  z-index: 1;
 }
 
 .asideCarousel .carousel-caption a {
@@ -1035,11 +1103,12 @@ body.dark-mode .articleNews .noticiaLink:hover {
   font-weight: bold;
   text-decoration: none;
   font-size: 1.08rem;
-  transition: color 0.2s;
+  transition: color 0.2s, background 0.2s;
   background: rgba(255,255,255,0.85);
   padding: 6px 18px;
   border-radius: 12px;
   box-shadow: 0 1px 4px #84007711;
+  display: inline-block;
 }
 
 .asideCarousel .carousel-caption a:hover {
@@ -1065,10 +1134,15 @@ body.dark-mode .articleNews .noticiaLink:hover {
   align-items: center;
   justify-content: center;
   opacity: 0.92;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
+.asideCarousel .carousel-btn.prev { left: 12px; }
+.asideCarousel .carousel-btn.next { right: 12px; }
 .asideCarousel .carousel-btn:hover {
   background: linear-gradient(135deg, #d587e7 60%, #840077 100%);
-  transform: scale(1.12);
+  transform: translateY(-50%) scale(1.12);
   box-shadow: 0 4px 18px #84007777;
 }
 
@@ -1105,14 +1179,30 @@ body.dark-mode .asideCarousel .carousel-caption a:hover {
 /* Responsivo para asideCarousel */
 @media (max-width: 700px) {
   .asideCarousel {
-    padding: 14px 2vw 10px 2vw;
+    padding: 10px 2vw 8px 2vw;
+    max-width: 99vw;
   }
   .asideCarousel .carousel-container {
     border-radius: 10px;
+    max-width: 99vw;
+    min-height: 100px;
   }
   .asideCarousel .carousel-item img {
     border-radius: 10px;
     height: 120px;
     object-fit: cover;
+    max-width: 99vw;
+  }
+  .asideCarousel .carousel-caption {
+    border-radius: 0 0 10px 10px;
+    font-size: 0.98rem;
+    padding: 6px 0 4px 0;
+  }
+  .asideCarousel .carousel-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 1.1rem;
+    left: 4px;
+    right: 4px;
   }
 }

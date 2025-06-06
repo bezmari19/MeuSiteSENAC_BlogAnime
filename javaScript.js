@@ -127,25 +127,83 @@ function sugestionButton() {
 
 // Carrossel de imagens do aside: controla qual imagem está visível
 let carouselIndex = 0;
+let carouselAutoplay = null;
+let carouselPaused = false;
 
 function showCarouselSlide(index) {
   const slide = document.querySelector('.carousel-slide');
-  const images = slide.querySelectorAll('img');
-  if (!images.length) return;
-  if (index >= images.length) carouselIndex = 0;
-  if (index < 0) carouselIndex = images.length - 1;
+  const items = slide.querySelectorAll('.carousel-item');
+  if (!items.length) return;
+
+  const visibleCount = 3; // Sempre 3 destaques por vez
+  const maxIndex = Math.max(items.length - visibleCount, 0);
+
+  if (index > maxIndex) carouselIndex = 0; // Loop para o início
+  else if (index < 0) carouselIndex = maxIndex; // Loop para o final
   else carouselIndex = index;
 
-  slide.style.transform = `translateX(-${carouselIndex * images[0].clientWidth}px)`;
+  // Move o slide pela largura de 1 item * índice
+  const itemWidth = items[0].offsetWidth;
+  slide.style.transform = `translateX(-${carouselIndex * itemWidth}px)`;
+
+  // Atualiza indicadores
+  updateCarouselIndicators(carouselIndex);
 }
 
-// Avança ou volta o carrossel
 function moveCarousel(direction) {
   showCarouselSlide(carouselIndex + direction);
 }
 
-// Inicializa o carrossel e ajusta ao redimensionar a janela
-showCarouselSlide(0);
+// --- Interatividade extra ---
+
+// Autoplay
+function startCarouselAutoplay() {
+  if (carouselAutoplay) clearInterval(carouselAutoplay);
+  carouselAutoplay = setInterval(() => {
+    if (!carouselPaused) moveCarousel(1);
+  }, 3500);
+}
+function stopCarouselAutoplay() {
+  if (carouselAutoplay) clearInterval(carouselAutoplay);
+}
+
+// Pausa ao passar o mouse
+const carouselContainer = document.querySelector('.carousel-container');
+if (carouselContainer) {
+  carouselContainer.addEventListener('mouseenter', () => { carouselPaused = true; });
+  carouselContainer.addEventListener('mouseleave', () => { carouselPaused = false; });
+}
+
+// Indicadores (bolinhas)
+function createCarouselIndicators() {
+  const slide = document.querySelector('.carousel-slide');
+  const items = slide.querySelectorAll('.carousel-item');
+  let indicators = document.querySelector('.carousel-indicators');
+  if (indicators) indicators.remove();
+
+  indicators = document.createElement('div');
+  indicators.className = 'carousel-indicators';
+  for (let i = 0; i <= Math.max(items.length - 3, 0); i++) {
+    const dot = document.createElement('span');
+    dot.className = 'carousel-dot';
+    dot.onclick = () => showCarouselSlide(i);
+    indicators.appendChild(dot);
+  }
+  carouselContainer.appendChild(indicators);
+}
+function updateCarouselIndicators(activeIdx) {
+  const dots = document.querySelectorAll('.carousel-dot');
+  dots.forEach((dot, idx) => {
+    dot.classList.toggle('active', idx === activeIdx);
+  });
+}
+
+// Inicialização
+window.addEventListener('DOMContentLoaded', () => {
+  showCarouselSlide(0);
+  createCarouselIndicators();
+  startCarouselAutoplay();
+});
 window.addEventListener('resize', () => showCarouselSlide(carouselIndex));
 
 
