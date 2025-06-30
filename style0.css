@@ -1,6 +1,19 @@
 @charset "UTF-8";
 
 /* =========================
+   VARIÁVEIS CSS
+========================= */
+:root {
+  --roxo-principal: #840077;
+  --roxo-claro: #d587e7;
+  --roxo-escuro: #2d0036;
+  --branco: #fff;
+  --cinza-fundo: #f0e6ff;
+  --cinza-fundo2: #f9f6ff;
+  --sombra: 0 8px 32px #84007733;
+}
+
+/* =========================
    RESET E CONFIGURAÇÕES GERAIS
 ========================= */
 
@@ -19,13 +32,13 @@ html, body {
 
 /* Estilo base do body */
 body {
-  background: linear-gradient(135deg, #f0e6ff 0%, #f9f6ff 100%);
-  color: #2d0036;
+  background: linear-gradient(135deg, var(--cinza-fundo) 0%, var(--cinza-fundo2) 100%);
+  color: var(--roxo-escuro);
   font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
   font-size: 17px;
   line-height: 1.6;
   min-height: 100vh;
-  box-shadow: 0 0 0 100vmax #f0e6ff inset;
+  box-shadow: 0 0 0 100vmax var(--cinza-fundo) inset;
   overflow-x: hidden;
 }
 
@@ -42,7 +55,7 @@ body {
   height: 70vh;
   max-height: 820px;
   border: 1.5px solid #fff2;
-  box-shadow: 0 8px 32px #84007733;
+  box-shadow: var(--sombra);
   display: flex;
   flex-direction: column;
   align-items: center; 
@@ -85,6 +98,49 @@ body {
   letter-spacing: 1.5px;
 }
 
+/* Ajuste de cor e contraste para texto no header sobre overlay */
+.header,
+.header h1,
+.header h2,
+.header h3,
+.header p,
+.header a {
+  color: #efefef !important;
+  text-shadow: 0 3px 16px #000, 0 1px 8px #000;
+}
+
+body.dark-mode .header,
+body.dark-mode .header h1,
+body.dark-mode .header h2,
+body.dark-mode .header h3,
+body.dark-mode .header p,
+body.dark-mode .header a {
+  color: #ffffff !important;
+  text-shadow: 0 3px 16px #000, 0 1px 8px #000;
+}
+
+/* Responsividade do header */
+@media (max-width: 900px) {
+  .header {
+    min-height: 320px;
+    padding: 40px 0;
+  }
+  .header a {
+    padding: 24px 12px;
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 600px) {
+  .header {
+    min-height: 180px;
+    padding: 20px 0;
+  }
+  .header a {
+    padding: 14px 8px;
+    font-size: 1rem;
+  }
+}
+
 /* =========================
    NAVEGAÇÃO
 ========================= */
@@ -104,6 +160,7 @@ body {
   flex-wrap: wrap;
   gap: 20px;
   backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px); /* Compatibilidade Safari */
   transition: background 0.3s, box-shadow 0.3s;
   border: 2px solid #fff3;
   position: relative;
@@ -187,7 +244,7 @@ body {
 .languageButton:focus {
   background: linear-gradient(90deg, #840077 0%, #d587e7 100%);
   color: #fff;
-  box-shadow: 0 4px 18px #84007799;
+  box-shadow: 0 4px 18px #d587e799;
   transform: scale(1.10);
   outline: none;
 }
